@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background: #eee;
+}
+.navbar{
+    padding: 5px 4%;
+}
+.navbar h3{
+    color: #c0392b !important;
+}
+.btn2 {
+    padding: 10px 20px;
+    background: #c0392b !important;
+    color: white !important;
+    border: none;
+    cursor: pointer !important;
+    border-radius: 5px;
+}
+.nav-container{
+    width: 100%;
+    height: auto;
+    background: #c0392b !important;
+    display: flex;
+    align-items: center;
+    padding: 10px 7%;
+}
+.nav-container a{
+    text-decoration: none;
+}
+.nav-container a h3{
+    text-decoration: none;
+    font-size: 20px;
+    color: #eee;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.table thead tr th{
+    color: #c0392b;
+}
+a ion-icon{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}        
+
