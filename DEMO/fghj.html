@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>grid line</title>
+    <style type="text/css">
+        .min_div{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            height: 200px;
+            background: #7EFFB2;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="min_div">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+</body>
+</html>

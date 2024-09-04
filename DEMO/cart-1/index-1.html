@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horizontal Scroll</title>
+	<style>
+		.container {
+			width: 100%;
+			overflow-x: scroll;
+			white-space: nowrap;
+			-ms-overflow-style: none; /* IE and Edge */
+			scrollbar-width: none; /* Firefox */
+		}
+
+		.container::-webkit-scrollbar {
+			display: none; /* Safari and Chrome */
+		}
+
+		.item {
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+			margin-right: 10px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var container = $(".container");
+			var scrollSpeed = 2;
+			var containerWidth = container.width();
+			var totalWidth = 0;
+
+			// Calculate the total width of all items
+			container.find(".item").each(function() {
+				totalWidth += $(this).outerWidth(true);
+			});
+
+			// Clone the items and append them to the container to create an infinite loop
+			container.append(container.html());
+			container.width(totalWidth * 2);
+
+			function loop() {
+				container.animate({
+					scrollLeft: container.scrollLeft() + scrollSpeed
+				}, 10, 'linear', function() {
+					// If the scroll position exceeds the total width, reset it to 0 to create an infinite loop
+					if (container.scrollLeft() >= totalWidth) {
+						container.scrollLeft(0);
+					}
+					loop();
+				});
+			}
+
+			container.hover(function() {
+				scrollSpeed = 0;
+			}, function() {
+				scrollSpeed = 2;
+			});
+
+			loop();
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+</body>
+</html>

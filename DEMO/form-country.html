@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="country">Country</label>
+    <select id="country"></select>
+
+    <label for="state">State</label>
+    <select id="state"></select>
+
+    <label for="city">City</label>
+    <select id="city"></select>
+
+
+    <script>
+        const countrySelect = document.getElementById("country");
+        const countries = ["Select Country", "USA", "Canada", "UK", "Australia", "Japan"];
+
+        countries.forEach(country => {
+            const option = document.createElement("option");
+            option.value = country;
+            option.text = country;
+            countrySelect.add(option);
+        });
+
+
+        countrySelect.addEventListener("change", function () {
+            // code to update state dropdown based on selected country
+        });
+
+
+        const selectedCountry = countrySelect.value;
+
+
+        const stateSelect = document.getElementById("state");
+        const states = [
+            { country: "USA", value: "AL", text: "Alabama" },
+            { country: "USA", value: "AK", text: "Alaska" },
+            { country: "USA", value: "AZ", text: "Arizona" },
+            { country: "Canada", value: "ON", text: "Ontario" },
+            { country: "Canada", value: "QC", text: "Quebec" },
+            { country: "UK", value: "ENG", text: "England" },
+            { country: "UK", value: "SCT", text: "Scotland" },
+            { country: "Australia", value: "NSW", text: "New South Wales" },
+            { country: "Australia", value: "VIC", text: "Victoria" },
+            { country: "Japan", value: "HOK", text: "Hokkaido" },
+            { country: "Japan", value: "TOK", text: "Tokyo" },
+        ];
+
+        const filteredStates = states.filter(state => state.country === selectedCountry);
+
+        stateSelect.innerHTML = "";
+        const defaultOption = document.createElement("option");
+        defaultOption.text = "Select State";
+        defaultOption.disabled = true;
+        defaultOption.selected = true;
+        stateSelect.add(defaultOption);
+
+        filteredStates.forEach(state => {
+            const option = document.createElement("option");
+            option.value = state.value;
+            option.text = state.text;
+            stateSelect.add(option);
+        });
+
+
+        stateSelect.addEventListener("change", function () {
+            // code to update city dropdown based on selected state
+        });
+
+
+        const selectedState = stateSelect.value;
+
+    </script>
+</body>
+
+</html>

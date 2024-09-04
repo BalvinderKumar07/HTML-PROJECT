@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navigation menu styles */
+        nav#menu {
+            position: fixed;
+            top: 0;
+            left: -200px;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+        }
+
+        nav#menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav#menu li {
+            margin: 1em 0;
+        }
+
+        nav#menu li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Menu button styles */
+        button#menu-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 1em;
+            font-size: 2em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button id="menu-button">&#9776;</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        // Get the menu button and menu elements
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+
+        // Add a click event listener to the menu button
+        menuButton.addEventListener("click", function () {
+            // Toggle the "active" class on the menu and menu button
+            menu.classList.toggle("active");
+            menuButton.classList.toggle("active");
+        });
+
+    </script>
+</body>
+
+</html>

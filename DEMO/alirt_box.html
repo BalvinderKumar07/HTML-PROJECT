@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+				initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        .container {
+            padding: 15px;
+            width: 400px;
+        }
+
+        label,
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            float: right;
+            margin-right: 10px;
+            background-color: green;
+            /* position: absolute; */
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container"> 
+            <div>
+
+                <input type="text" placeholder="name"><br><br>
+
+                <input id="textEmail" placeholder="Email"><br>
+                <p id="demo"></p>
+  
+                <input type="text" id="password" placeholder="Password"><br>
+                <p id="error"></p>
+            </div>
+            <button type="submit" onclick="errorMessage()">
+                Submit
+            </button>
+        </div>
+    </center>
+
+
+
+    
+<script>
+    function errorMessage() {
+        var email;
+        email = document.getElementById("textEmail").value;
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        
+        var error = document.getElementById("error")
+        if (isNaN(document.getElementById("password").value)){
+
+            // Changing content and color of content
+            document.getElementById("error").textContent = "Please enter a valid number"
+            document.getElementById("error").style.color = "red"
+            document.getElementById("error").style.fontFamily = "arial"
+
+        } else if  (reg.test(textEmail.value) == false) {
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").innerHTML = " Pleass enter vaild Email";
+            document.getElementById("demo").style.fontFamily = "arial"
+
+        }else{
+            error.textContent = ""
+
+            document.getElementById("demo").innerHTML = "";
+        }
+    }
+</script>
+</body>
+</html>
