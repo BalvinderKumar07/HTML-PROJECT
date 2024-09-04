@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Navbar Animation</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">BALVINDER<span>KUMAR</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <div class="inner">
+                            <h2 class="title">Coding Solution Point</h2>
+                            <p>
+                                We welcome you to our YouTube channel ‘Coding Solution Point’, we will solve the coding
+                                on this YouTube channel and explain the code, as well as provide you the source code of
+                                coding, so that the viewer of our video will face any kind of problem.
+                                Do not have to do this on our YouTube channel ‘Coding Solution Point’ will get all kinds
+                                of contact for coding business, if still there is any problem then contact us.
+                                If you like our YouTube channel and according to you the contact is good, then like our
+                                every video and subscribe to YouTube, as well as share our channel,
+                                Thank you! For visiting our ‘Coding Solution Point’ YouTube channel.
+                            </p>
+                            <button class="btn">Read more</button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#" style="--i: 0.05s;">Home</a></li>
+                <li><a href="#" style="--i: 0.1s;">Services</a></li>
+                <li><a href="#" style="--i: 0.15s;">Portfolio</a></li>
+                <li><a href="#" style="--i: 0.2s;">Testimonials</a></li>
+                <li><a href="#" style="--i: 0.25s;">About</a></li>
+                <li><a href="#" style="--i: 0.3s;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const hamburger_menu = document.querySelector(".hamburger-menu");
+        const container = document.querySelector(".container");
+
+        hamburger_menu.addEventListener("click", () => {
+            container.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

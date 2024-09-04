@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200&family=Inter+Tight:wght@200&family=Montserrat:wght@200;300&family=Play&family=Roboto+Condensed:wght@300&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Play', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; 
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#video-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 110vh;
+  z-index: -1;
+  background: #020408;
+}
+#video-background .video {
+  width: -101%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  z-index: 9999;
+}
+.navbar {
+  width: 75%;
+  padding: 20px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: red; */
+}
+.links a {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.links a:hover {
+  color: #ffffff67;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.side-slider {
+  width: 25%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+.box {
+  width: 100%;
+  height: 50%;
+  border-left: .00001rem solid #eeeeee28;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box:nth-child(2) {
+  border-top: .00001rem solid #eeeeee28;
+}
+.box img {
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.box h1 {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+  width: 75%;
+  height: 73%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content h1{
+  font-size: 100px;
+  font-family: 'Play', sans-serif;
+  color: #fff;
+  font-weight: 100;
+  padding: 30px ;
+}
+.content button{
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Play', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.content button:hover{
+  background: #ffffff67;
+}
+.content ion-icon{
+  color: #fff;
+  display: block;
+  font-size: 50px;
+  margin-top: 20px;
+  transform: translateY(0px);
+  font-weight: 200;
+  transition: 2s;
+  animation: scroll-down 2s ease-in-out infinite;
+}
+@keyframes scroll-down{
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(50px);
+  }
+}
+
+

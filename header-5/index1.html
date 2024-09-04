@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <section class="side_navbar" id="navbar">
+        <center>
+            <div class="logo">
+                <div class="img">
+                    <img src="img1.png" alt="">
+                </div>
+            </div>
+
+            <div class="link" id="link">
+                <a href="#" class="acitv"><ion-icon name="home-outline"></ion-icon>home</a>
+                <a href="#"><ion-icon name="briefcase-outline"></ion-icon>features</a>
+                <a href="#"><ion-icon name="layers-outline"></ion-icon>portfilo</a>
+                <a href="#"><ion-icon name="people-outline"></ion-icon>resume</a>
+                <a href="#"><ion-icon name="person-outline"></ion-icon>clients</a>
+                <a href="#"><ion-icon name="cart-outline"></ion-icon>pricing</a>
+                <a href="#"><ion-icon name="image-outline"></ion-icon>blog</a>
+                <a href="#"><ion-icon name="chatbubble-outline"></ion-icon>contacts</a>
+            </div>
+
+            <button class="btn">
+                <ion-icon name="cart-outline"></ion-icon>
+                <span>0</span>
+            </button>
+
+            <hr class="line">
+
+            <div class="icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+        </center>
+    </section>
+<!--===================================================================-->
+<section class="home" id="home">
+    <center>
+        <div class="home_logo">
+            <div class="img">
+                <img src="img2.png" alt="">
+            </div>
+        </div>
+
+        <h1>Hi , I'm Jone Lee</h1>
+
+        <div class="container">
+            <p>I am a 
+                <span class="typed-text"></span>
+                <span class="TypeCursor">&nbsp;</span>
+            </p>
+        </div>
+
+        <button class="btn1">Contant me</button>
+
+        <script src="function.js"></script>
+    </center>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+
+
+
+
+    <script>
+        const TypingText = document.querySelector(".typed-text");
+        const AutoTyping = document.querySelector(".TypeCursor");
+        const textArray = ["UI/UX Designer.", "Professionl Coder.", "Developer."];
+        const typingDelay = 100;
+        const erasingDelay = 100;
+        const newTextDelay = 1000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if (!AutoTyping.classList.contains("typing")) AutoTyping.classList.add("typing");
+                TypingText.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            }
+            else {
+                AutoTyping.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+        function erase() {
+            if (charIndex > 0) {
+                if (!AutoTyping.classList.contains("typing")) AutoTyping.classList.add("typing");
+                TypingText.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            }
+            else {
+                AutoTyping.classList.remove("typing");
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+    </script>
+</body>
+</html>

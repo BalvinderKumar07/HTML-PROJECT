@@ -1,0 +1,70 @@
+<section class="header" id="header">
+    <nav class="navbar" id="navbar">
+        <ion-icon name="logo-apple"></ion-icon>
+        <button>Book Your Tickets</button>
+    </nav>
+    <div class="container">
+        <h1>Mountain Madness</h1>
+        <span>start in </span>
+        <div class="links">
+            <ul>
+                <li><span id="days"></span>Days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+            </ul>
+        </div>
+    </div>
+    <nav class="down-navbar">
+        <div class="icon">
+            <ion-icon name="play"></ion-icon>
+            <span>Watch promo video</span>
+            <ion-icon name="share-social"></ion-icon>
+            <span>Share the madness</span>
+        </div>
+        <div class="madia-icon">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+    </nav>
+</section>
+<script>
+    (function () {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy - 1,
+            dayMonth = "07/20/",
+            birthday = dayMonth + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > birthday) {
+            birthday = dayMonth + nextYear;
+        }
+        //end
+
+        const countDown = new Date(birthday).getTime(),
+            x = setInterval(function () {
+
+                const now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+            }, 0)
+    }());
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

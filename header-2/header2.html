@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>header</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+        /*font-family: 'Roboto', sans-serif;*/
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .3s linear;
+        }
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+        html::-webkit-scrollbar{
+            width: .8rem;
+        }
+        html::-webkit-scrollbar-thumb {
+            background: #eee;
+            border-radius: 4rem;
+        }
+        body {
+            background: rgb(5, 5, 5);
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            background: #23AEF4;
+        }
+        .main .header {
+            width: 100%;
+            height: 680px;
+            background-image: url(jj.png);
+            background-size: cover;
+            overflow: hidden;
+
+        }
+        .box {
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .box1 {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 7%;
+        }
+        .box1 h2 {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+        button {
+            margin: 20px;
+        }
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: rgb(249, 246, 246);
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(251, 248, 248, 0.1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+        .btn-12 {
+            position: relative;
+            right: 20px;
+            bottom: 20px;
+            border: none;
+            box-shadow: none;
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            -webkit-perspective: 230px;
+            perspective: 230px;
+        }
+        .btn-12 span {
+            background: rgb(9, 11, 11);
+            background: linear-gradient(0deg, rgb(11, 11, 11) 0%, rgbrgb(7, 7, 7)0%);
+            display: block;
+            position: absolute;
+            width: 130px;
+            height: 40px;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            border-radius: 5px;
+            margin: 0;
+            text-align: center;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+        .btn-12 span:nth-child(1) {
+            box-shadow:
+                -7px -7px 20px 0px #fff9,
+                -4px -4px 5px 0px #fff9,
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001;
+            -webkit-transform: rotateX(90deg);
+            -moz-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+        }
+        .btn-12 span:nth-child(2) {
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+        }
+        .btn-12:hover span:nth-child(1) {
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+        .btn-12:hover span:nth-child(2) {
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            color: transparent;
+            -webkit-transform: rotateX(-90deg);
+            -moz-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+        }
+        .box2 {
+            width: 100%;
+            height: 200px;
+            margin-top: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            color: white;
+
+        }
+        .box3 {
+            width: 100%;
+            height: 120px;
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 7%;
+        }
+        .content {
+            position: relative;
+        }
+        .content h1 {
+            color: #fff;
+            position: absolute;
+            left: 650px;
+            transform: translate(-50%, -50%);
+        }
+        .content h1:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px #f3f6f7;
+        }
+        .content h1:nth-child(2) {
+            color: #f3f6f8;
+            animation: animate 4s ease-in-out infinite;
+        }
+        @keyframes animate {
+            0%,
+            100% {
+                clip-path: polygon(0% 45%,
+                        16% 44%,
+                        33% 50%,
+                        54% 60%,
+                        70% 61%,
+                        84% 59%,
+                        100% 52%,
+                        100% 100%,
+                        0% 100%);
+            }
+            50% {
+                clip-path: polygon(0% 60%,
+                        15% 65%,
+                        34% 66%,
+                        51% 62%,
+                        67% 50%,
+                        84% 45%,
+                        100% 56%,
+                        100% 100%,
+                        0% 100%);
+            }
+        }
+        .box3 .date h3 {
+            color: white;
+            font-size: 35px;
+            font-weight: 100;
+        }
+        .box3 .date h3 span {
+            font-size: 20px;
+        }
+        .box3 .nav ul li {
+            float: left;
+            margin-left: 30px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+        .box3 .nav ul li:hover {
+            color: skyblue;
+            border-bottom: 1px solid skyblue;
+        }
+        .main2 {
+            width: 100%;
+            height: 100vh;
+            background: rgb(5, 5, 5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .min {
+            width: 900px;
+            height: 70%;
+            /* background: red; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card {
+            width: 200px;
+            height: 300px;
+            /* background: skyblue; */
+            text-align: center;
+            font-size: 50px;
+            background-size: cover;
+        }
+        .card:nth-child(1) {
+            background-image: url(img1.jpg);
+
+        }
+        .card:nth-child(2) {
+            margin-top: -150px;
+            background-image: url(img2.jpg);
+
+        }
+        .card:nth-child(3) {
+            background-image: url(img3.jpg);
+
+        }
+        .card:nth-child(4) {
+            margin-top: -150px;
+            background-image: url(img4.jpg);
+
+        }
+        .card p {
+            position: relative;
+            bottom: -270px;
+        }
+        .text {
+            width: 800px;
+            height: 300px;
+            position: absolute;
+            top: 1300px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .marquee {
+            width: 100%;
+            height: 10%;
+            float: left;
+            margin-top: 80px;
+            float: left;
+        }
+        .marquee h1 {
+            font-size: 90px;
+            color: white;
+        }
+        .marquee img {
+            height: 90px;
+            position: relative;
+            top: 100px;
+            left: -150px;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+<body>
+    <!-----------------------------------main1 start--------------------------->
+    <div class="main" id="main">
+        <div class="header" id="header">
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="box box1">
+                    <h2>About</h2>
+                    <button class="custom-btn btn-12"><span>Click!</span><span>Sing Up</span></button>
+                </div>
+            </div>
+            <div class="box box2 content animate__animated animate__backInDown">
+                <h1>Nature.</h1>
+                <h1>Nature.</h1>
+            </div>
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="box box3">
+                    <div class="date">
+                        <h3> 23 <span>/11/2022</span></h3>
+                    </div>
+                    <div class="nav">
+                        <ul type="none">
+                            <li>home</li>
+                            <li>blog</li>
+                            <li>contact</li>
+                            <li>pages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------mani1 end---------------------------------->
+    <!---------------------------------------main2 satrt------------------------------->
+    </div>
+    <div class="main2" id="main2">
+        <div class="min">
+            <div class="card">
+                <p>W</p>
+            </div>
+            <div class="card">
+                <p>E</p>
+            </div>
+            <div class="card">
+                <p>S</p>
+            </div>
+            <div class="card">
+                <p>T</p>
+            </div>
+        </div>
+        <div class="text">
+            <div data-aos="fade-up">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                    adipisci eaque, dolorem natus ea ut similique architecto cumque nobis
+                    nam ad maiores aperiam doloribus impedit modi minus aut perspiciatis! Magnam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                    adipisci eaque, dolorem natus ea ut similique architecto cumque nobis
+                    nam ad maiores aperiam doloribus impedit modi minus aut perspiciatis! Magnam.</p>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------main2 end------------------------------->
+    <!---------------------------------------youtube channel litel satrt------------->
+    <div class="marquee">
+        <marquee>
+            <img src="youtube.png">
+            <h1> Coding Solution Point</h1>
+        </marquee>
+    </div>
+    <!---------------------------------------youtube channel litel end------------->
+
+    <script>
+        AOS.init
+            ({
+                duration: 1400,
+            });
+    </script>
+</body>
+</html>

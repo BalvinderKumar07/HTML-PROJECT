@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Video Background Example</title>
+
+  <link rel="stylesheet" href="header.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <div id="video-background">
+    <video autoplay loop muted class="video">
+      <source src="video-1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Rest of your website content goes here -->
+  <section class="header" id="header">
+    <nav class="navbar" id="navbar">
+      <div class="logo">
+        <img src="logo-2.png">
+      </div>
+      <div class="links">
+        <a href="#home">Missions</a>
+        <a href="#about">NASA TV</a>
+        <a href="#service">About</a>
+        <a href="#blog">Audiences</a>
+        <a href="#bcontant">Blog</a>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="side-slider">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box box1">
+              <center>
+                <h1>A black hole is an incredibly dense region in space with gravity so strong that nothing, not even
+                  light, can escape its grasp.</h1>
+                <img src="img-3.png">
+              </center>
+            </div>
+            <div class="box box2">
+              <center>
+                <h1>A space gallery is a captivating exhibition showcasing the wonders of the universe through stunning
+                  astronomical displays and interactive educational experiences.</h1>
+                <img src="img-5.png">
+              </center>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="swiper-slide">
+            <div class="box box1">
+              <center>
+                <h1>
+                  A NASA spaceship is a state-of-the-art spacecraft designed to explore and investigate celestial bodies
+                  and conduct scientific research in outer space.</h1>
+                <img src="img-6.png">
+              </center>
+            </div>
+            <div class="box box2">
+              <center>
+                <h1>A space station is a habitable structure orbiting Earth, serving as a base for scientific research,
+                  international cooperation, and long-duration human space exploration.</h1>
+                <img src="img-7.png">
+              </center>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box box1">
+              <center>
+                <h1>Saturn, the sixth planet from the Sun, is a magnificent gas giant known for its iconic rings and
+                  numerous moons.</h1>
+                <img src="img-8.png">
+              </center>
+            </div>
+            <div class="box box2">
+              <center>
+                <h1>Over the years, NASA has sent five robotic vehicles, called rovers, to Mars. The names of the five
+                  rovers are: Sojourner, Spirit and Opportunity, Curiosity, and Perseverance. Mars is a fascinating
+                  planet.</h1>
+                <img src="img-9.png">
+              </center>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box box1">
+              <center>
+                <h1>A satellite is an artificial object placed into orbit around a celestial body, typically Earth, for
+                  various purposes such as communication, navigation, and scientific observation.</h1>
+                <img src="img-10.png">
+              </center>
+            </div>
+            <div class="box box2">
+              <center>
+                <h1>
+                  A rocket launch is the awe-inspiring event of propelling a spacecraft into space by harnessing the
+                  power of controlled explosions and thrust.</h1>
+                <img src="img-1.png">
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="content">
+      <center>
+        <h1>Space Love<span>Mission</span><br>
+          <span>Review</span>
+        </h1>
+        <button>Know More</button><br>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </center>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

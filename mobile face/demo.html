@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freash Food</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!"><img src="logo1.png"></a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="navbar-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Services</a>
+
+                    </li>
+                    <li>
+                        <a href="#!">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="header" id="header">
+        <div class="blog-container">
+            <div class="blog-box animate__animated animate__fadeInLeft">
+                <div class="content">
+                    <p>100% natural</p>
+                    <h2>fresh Sooothie & Summer Juice</h2>
+                    <p>Best sellingsummer juice natural extracts.</p>
+                    <button class="btn">shop now</button>
+                </div>
+                <div class="img">
+                    <img src="img-1.png">
+                </div>
+            </div>
+            <div class="blog-box animate__animated animate__fadeInLeft">
+                <div class="content">
+                    <p>20% off</p>
+                    <h2>fresh & Vegetables</h2>
+                    <p>shop the category</p>
+                    <button class="btn">shop now</button>
+                </div>
+                <div class="img">
+                    <img src="img-2.png">
+                </div>
+            </div>
+            <div class="blog-box animate__animated animate__fadeInLeft">
+                <div class="content">
+                    <p>15% off</p>
+                    <h2>Baked Products</h2>
+                    <p>shop the category</p>
+                    <button class="btn">shop now</button>
+                </div>
+                <div class="img">
+                    <img src="img-3.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- javascript file -->
+    <script>
+        (function ($) {
+            $(function () {
+
+                //  open and close nav 
+                $('#navbar-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+
+
+                // Hamburger toggle
+                $('#navbar-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+
+
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+                    // Close dropdown when select another dropdown
+                    $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+                    e.stopPropagation();
+                });
+
+
+                // Click outside the dropdown will remove the dropdown class
+                $('html').click(function () {
+                    $('.navbar-dropdown').hide();
+                });
+            });
+        })(jQuery); 
+    </script>
+
+</body>
+
+</html>

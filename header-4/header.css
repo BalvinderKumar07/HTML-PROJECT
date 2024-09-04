@@ -1,0 +1,389 @@
+        @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Herr+Von+Muellerhoff&family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        :root {
+            --main-color: #FF4A52;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transition: .3s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+
+        html::-webkit-scrollbar {
+            width: .8rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: var(--main-color);
+            border-radius: 4rem;
+        }
+
+        /* =================================header style start */
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(header-gackrund.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .main_header {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 40px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .navbar .logo h1 {
+            font-size: 30px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #eee;
+        }
+
+        .navbar .logo h1 span {
+            font-weight: 100;
+            color: var(--main-color);
+        }
+
+        .navbar ion-icon {
+            font-size: 20px;
+            color: #eee;
+            padding: 0 5px;
+        }
+
+        .links {
+            margin-left: 290px;
+        }
+
+        .links a {
+            font-size: 15px;
+            padding: 20px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #eee;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .links a:hover {
+            color: var(--main-color);
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: #eee;
+        }
+
+        .header-content {
+            width: 100%;
+            padding: 100px;
+            /* background: red; */
+            position: absolute;
+            top: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content h1 {
+            font-size: 70px;
+            color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header-content p {
+            font-size: 20px;
+            color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            padding-bottom: 50px;
+        }
+
+        .header-content form {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content form input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 0 10px;
+        }
+
+        .header-content form select {
+            width: 300px;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .header-content form option {
+            border-radius: 10px;
+        }
+
+        .header-content form button {
+            padding: 6px 30px;
+            width: 200px;
+            font-size: 18px;
+            text-transform: uppercase;
+            background: var(--main-color);
+            border: none;
+            color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .header-content form button:hover {
+            background: #eee;
+            color: var(--main-color);
+        }
+
+        #main-sidebar {
+            width: 100%;
+            height: 100vh;
+            display: none;
+            transition: .5s;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #eee;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: block;
+            z-index: 999999;
+            font-family: 'Tilt Neon', cursive;
+        }
+
+        .sidenav a {
+            font-size: 20px;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: arial;
+            padding: 10px 0 20px 50px;
+            font-weight: 600;
+            display: block;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            color: black;
+        }
+
+        .sidenav a:hover {
+            color: var(--main-color);
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 40px;
+            margin-left: 50px;
+            font-weight: 100;
+            padding: 10px 20px;
+            background: var(--main-color);
+            color: #eee;
+            border-radius: 50%;
+        }
+
+        .sidenav .closebtn:hover {
+            color: black;
+        }
+
+        .sideabr_btn {
+            padding: 10px 30px;
+            border: 2px solid var(--main-color2);
+            background: transparent;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--main-color2);
+            letter-spacing: 1px;
+            position: relative;
+            left: 50px;
+        }
+
+        .sideabr_btn:hover {
+            cursor: pointer;
+            background: var(--main-color2);
+            color: #eee;
+        }
+
+        .sidenav ion-icon {
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 50px;
+            color: var(--main-color);
+        }
+
+        .sidenav .facebook {
+            margin-left: 50px;
+        }
+
+        .sidenav ion-icon:hover {
+            opacity: .5;
+            cursor: pointer;
+        }
+
+        .sidenav ul li {
+            font-size: 20px;
+            color: var(--main-color);
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .line {
+            width: 50%;
+            border-bottom: 1px solid var(--main-color);
+            margin: 20px 0 0 50px;
+            opacity: .5;
+        }
+
+        .side-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10%;
+            overflow: hidden;
+        }
+
+        .side-box .box {
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box:hover img {
+            transform: scale(1.2);
+        }
+
+        .conent {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -100%;
+            background: rgba(0, 0, 0, .5);
+            padding: 10px 20px;
+            opacity: 0;
+
+        }
+
+        .conent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .conent h2 {
+            color: #eee;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: 'Tilt Neon', cursive;
+        }
+
+        .conent h2 ion-icon {
+            color: yellow;
+            font-size: 30px;
+            position: relative;
+            top: 2px;
+            padding: 0 3px;
+        }
+
+        .conent p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, .7);
+            padding: 5px 15px;
+        }
+
+        .box:hover .conent {
+            opacity: 1;
+        }
+
+
+        /* =================================header style end*/
+
+
+
+
+        @media only screen and (max-width: 991px) {
+            .main_header h1 {
+                font-size: 70px;
+                padding: 200px 5% 0 5%;
+            }
+
+            .links {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header {
+                width: 100%;
+                height: auto;
+            }
+
+            .navbar .btn_A {
+                display: none;
+            }
+
+            .main_header h1 {
+                font-size: 40px;
+                padding: 200px 10% 20px 10%;
+            }
+
+            #nav_img {
+                width: 150px;
+            }
+
+            .header-content form {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 448px) {
+            .navbar .logo h1 {
+                font-size: 20px;
+            }
+        }

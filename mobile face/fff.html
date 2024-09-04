@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter By Tool Details@</title>
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style-main.css">
+
+    <!-- jQuery script link-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <!-- Bootstartp Script link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="web-navbar" id="navbar">
+        <h1>Filter By Tool Details@</h1>
+        <button class="btn2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"><ion-icon name="menu-outline"></ion-icon></button>
+    </div>
+    <?php
+include "admin/config.php";
+$post_id = $_GET['id'];
+$sql = "SELECT * FROM post
+WHERE post.post_id = {$post_id}";
+$result = mysqli_query($conn, $sql) or die("Query Failed.");
+if(mysqli_num_rows($result) > 0){
+while($row = mysqli_fetch_assoc($result)) {
+?>
+    <div class="container-sm text-left mt-5">
+        <div class="row">
+            <div class="col-md-4 bg-primary p-4 ">
+                <img src="admin/upload/<?php echo $row['post_img']; ?>" alt="">
+            </div>
+            <?php 
+                    if(!empty($_GET['file']))
+                    {
+                    $filename = basename($_GET['file']);
+                    $filepath = 'Demo/' . $filename;
+                    if(!empty($filename) && file_exists($filepath)){
+                    //Define Headers
+                    header("Cache-Control: public");
+                    header("Content-Description: FIle Transfer");
+                    header("Content-Disposition: attachment; filename=$filename");
+                    header("Content-Type: application/zip");
+                    header("Content-Transfer-Emcoding: binary");
+                    readfile($filepath);
+                    exit;
+                    }
+                    else{
+                    echo "This File Does not exist.";
+                    }
+                    }
+
+                    ?>
+            <div class="col-md-8 p-3">
+                <h1>ALU-POWER HPC 3 FLUTE 37 DEGREE HELIX END MILL</h1>
+                <p><b>EDP:</b> E5G95008</p>
+                <p><b>Size:</b> 1/8 x 1/8 x 1/4 x 1-1/2</p>
+                <p><b>Product Group:</b> Alu-Power HPC </p>
+                <p><b>Type:</b> Square End </p>
+                <p><b>Shank Style:</b> Cylindrical </p>
+            </div>
+        </div>
+
+        <table class="table table-bordered border text-center mt-5">
+            <thead>
+                <tr class="text-center">
+                    <th>SR.No</th>
+                    <th>Inch/Metric</th>
+                    <th>#Flutes</th>
+                    <th>Diameter inch</th>
+                    <th>Shank Dia.Inch</th>
+                    <th>LOC.Inch</th>
+                    <th>LBS.Inch</th>
+                    <th>OAL.Inch</th>
+                    <th>Corner Radius</th>
+                </tr>
+                <tr class="text-center">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
+
+        <table class="table table-bordered border text-center mt-5">
+            <thead>
+                <tr class="text-center">
+                    <th>Corner Chamfer</th>
+                    <th>End Angle</th>
+                    <th>Helix Angle</th>
+                    <th>Coating</th>
+                    <th>Material</th>
+                    <th>Cut Type</th>
+                    <th>Center Cutting</th>
+                    <th>End</th>
+                </tr>
+                <tr class="text-center">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+    <?php
+                          }
+                        }
+                        else{
+                          echo "<h2>No Record Found.</h2>";
+                        }
+
+                        ?>
+
+
+    <!-- Ion-Icon script link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Bootstrap Script link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
