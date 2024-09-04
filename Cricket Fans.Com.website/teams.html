@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teams</title>
+
+	<link rel="stylesheet" type="text/css" href="teams.css">
+
+	<link rel="stylesheet" type="text/css" href="abc.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" type="text/css" href="framwork.css">
+
+	<link href="https://unpkg.com/tailwindcss@1.0/dist/tailwind.min.css" rel="stylesheet">
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="table.css">
+</head>
+
+<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<ion-icon name="arrow-up-outline"></ion-icon>
+	</button>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+	<!-- header section start -->
+	<div class="navbar_space">
+	</div>
+	<header id="nav">
+		<h1>Cricket fans.com</h1>
+		<nav class="navbar navbar2">
+			<a href="file:///C:/Users/hp/Desktop/html/abc.html" class="active">Home</a>
+			<a href="file:///C:/Users/hp/Desktop/html/Events.html" target="_block">Events</a>
+			<a href="#team">Teams</a>
+			<a href="https://circketfans07.blogspot.com/">Blog</a>
+		</nav>
+		<div class="icons">
+			<i class="fab fa-facebook" id="facebook"></i>
+			<i class="fab fa-twitter" id="twitter"></i>
+			<i class="fab fa-instagram" id="instagram"></i>
+			<i class="fas fa-bars" id="menu"></i>
+		</div>
+	</header>
+	<!-- header section end -->
+	<div class="team_nav">
+		<button style="background-color:  #4391d8; color: white;">Man</button>
+		<button style="margin-left: 3rem;">Woman</button>
+	</div>
+	<!-- teams_div start -->
+	<div class="team_div team_div1">
+		<h2>Australia</h2>
+		<img src="https://www.kobe-cufs.ac.jp/english/images/flag011.png">
+		<div class="team_hover">
+			<div class="white">
+				<img src="https://s-media-cache-ak0.pinimg.com/originals/29/bf/ba/29bfbaf576fd4acc9cc352413fa1ab41.jpg">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div2">
+		<h2>India</h2>
+		<img src="https://www.kobe-cufs.ac.jp/english/files/flag_india2.png">
+		<div class="team_hover team_hover1">
+			<div class="white">
+				<img src="https://wallpaperaccess.com/full/5747916.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div3">
+		<h2>Pakistan</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/255px-Flag_of_Pakistan.svg.png">
+		<div class="team_hover team_hover2">
+			<div class="white">
+				<img
+					src="https://awamiweb.com/wp-content/uploads/2016/03/12072590_1004887989584533_5895812510063162423_n.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div4">
+		<h2> England</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/255px-Flag_of_England.svg.png">
+		<div class="team_hover team_hover3">
+			<div class="white">
+				<img
+					src="https://e7.pngegg.com/pngimages/556/133/png-clipart-england-cricket-team-england-and-wales-cricket-board-cricket-world-cup-professional-cricketers-association-cricket.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+
+
+	<div class="team_div team_div5">
+		<h2>New Zealand</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/255px-Flag_of_New_Zealand.svg.png">
+		<div class="team_hover team_hover4">
+			<div class="white">
+				<img
+					src="https://www.theindianwire.com/wp-content/uploads/2020/09/New-Zealand-Cricket-Team-Logo-PNG-Image.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div6">
+		<h2> Sri Lanka</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/255px-Flag_of_Sri_Lanka.svg.png">
+		<div class="team_hover team_hover5">
+			<div class="white">
+				<img src="https://iconape.com/wp-content/files/id/330862/svg/330862.svg">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div7">
+		<h2>South Africa</h2>
+		<img src="https://cdn.britannica.com/27/4227-004-32423B42/Flag-South-Africa.jpg">
+		<div class="team_hover team_hover6">
+			<div class="white">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Southafrica_cricket_logo.svg/1200px-Southafrica_cricket_logo.svg.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div8">
+		<h2>West Indies</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Cricket_West_Indies_Logo_2017.png/150px-Cricket_West_Indies_Logo_2017.png">
+		<div class="team_hover team_hover7">
+			<div class="white">
+				<img
+					src="https://p.kindpng.com/picc/s/89-898266_west-indies-cricket-png-image-free-download-searchpng.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div9">
+		<h2> Ireland</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cricket_Ireland_flag.svg/120px-Cricket_Ireland_flag.svg.png">
+		<div class="team_hover team_hover8">
+			<div class="white">
+				<img
+					src="https://www.cricketireland.ie/images/sized/images/uploads/news_images/Cricket_Ireland_Main_logo-340x342.jpg">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div10">
+		<h2>Afghanistan</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Afghanistan_%281928%29.svg/180px-Flag_of_Afghanistan_%281928%29.svg.png">
+		<div class="team_hover team_hover9">
+			<div class="white">
+				<img src="https://cdn.cricket.af/logo-md.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div11">
+		<h2>Bangladesh</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/255px-Flag_of_Bangladesh.svg.png">
+		<div class="team_hover team_hover10">
+			<div class="white">
+				<img src="https://iconape.com/wp-content/png_logo_vector/bangladesh-national-cricket-team-logo.png">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+	<div class="team_div team_div12">
+		<h2>Zimbabwe</h2>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/255px-Flag_of_Zimbabwe.svg.png">
+		<div class="team_hover team_hover11">
+			<div class="white">
+				<img src="https://aniportalimages.s3.amazonaws.com/media/details/zimbabpcnsd.jpg">
+			</div>
+		</div>
+		<div class="min_nav_div"></div>
+	</div>
+
+	</script>
+	<div class="space"></div>
+	<script type="text/javascript">
+		let menu = document.querySelector('#menu');
+		let navbar = document.querySelector('.navbar');
+		menu.onclick = () => {
+			menu.classList.toggle('fa-times');
+			navbar.classList.toggle('active');
+		}
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root
+{
+--light-red: rgba(200,35,54,.9);
+--black: #000;
+--box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*
+{
+	font-family: 'arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all .2s linear;
+}
+html
+{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top:9rem;
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+	width: .8rem;
+}
+html::-webkit-scrollbar-track
+{
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb
+{
+	background-color: #fff;
+	border-radius: 4rem;
+}
+
+
+body
+{
+	background:var(--bg) ;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+ #myBtn ion-icon
+ {
+ 	font-size: 25px;
+ }
+
+#myBtn:hover {
+  background-color: #555;
+  opacity: 0.8;
+}
+/*navbar style start*/
+/*.navbar_space
+{
+	width: 100%;
+	height:13rem;
+	background-color:#8c8c8c;
+	position: absolute;
+	top: 0;
+}*/
+#nav
+{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background:transparent;
+padding: 1.5rem 7%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+box-shadow: var(--box-shadow);
+z-index: 5000;
+background-color:transparent;
+background-color: #8c8c8c;
+box-shadow: 2rem;
+transition: 3s;
+	background-image: url(https://media-exp1.licdn.com/dms/image/C5616AQFVcBdd6K6vuQ/profile-displaybackgroundimage-shrink_200_800/0/1611465147046?e=1663200000&v=beta&t=RPWj2USopkhPYFxYI93GnDRKOIJ-Hem2ERJHQxOFGqs);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#nav:hover
+{
+	background-color: #8c8c8c;
+}
+header h1
+{
+	font-size:3.18rem;
+	color: white;
+}
+header .navbar a
+{
+	font-size: 1.5rem;
+	color:white;
+	margin: 0 1rem;
+	letter-spacing: .1rem;
+}
+header .navbar a:hover
+{
+	border-bottom: solid blue .1rem;
+	padding: .5rem;
+}
+header .icons i
+{
+	cursor: pointer;
+	font-size:2.5rem;
+	margin-left: 2rem;
+	color: white;
+	cursor: pointer;
+}
+ .input:hover #search-btn 
+{
+	position: relative;
+	right: -100rem;
+}
+#search-btn input
+{
+	width: 25rem;
+	height:4rem;
+	font-size:2rem;
+	font-family: arial;
+	border:solid .4rem white;
+	border-radius: .4rem;
+	outline: none;
+	padding: 1rem;
+	color: white;
+	background-color:#8c8c8c;
+}
+#search-btn:hover
+{
+	/*font-size: 3rem;*/
+	color: black;
+}
+#facebook:hover
+{
+	font-size: 3rem;
+	color:#214e8e;
+}
+#twitter:hover
+{
+	font-size: 3rem;
+	color:#4ca2e5;
+}
+#instagram:hover
+{
+	font-size: 3rem;
+	color: #c41c51;
+}
+#menu:hover
+{
+	font-size: 3rem;
+	color: #4CACBC;
+}
+header .icons #menu
+{
+	display: none;
+}
+@media(max-width:480px)
+{
+	#nav h1
+	{
+		font-size:2rem;
+	}
+	.page1 .page1_in_div h1
+	{
+		font-size: 4rem;
+		margin-left: 2rem;
+	}
+	.page1 .page1_in_div p
+	{
+		font-size: 2rem;
+		margin-left:-2rem;
+	}
+	.page1 .page1_in_div
+	{
+		width: 90%;
+	}
+	.page2 .page2_in_div1 h1
+	{
+		font-size: 3rem;
+		margin-left: -2rem;
+	}
+	.page2 .page2_in_div1 p
+	{
+		font-size: 1.5rem;
+		margin-left: -5rem;
+	}
+	.button9
+	{
+		width: 15rem;
+		height: 3rem;
+		font-size:1rem;
+		margin-left:-3%;
+		color: white;
+	}
+	.page1_in_div h1
+	{
+		font-size:.1rem;
+		/*position: relative;
+		left: -8rem;*/
+		text-align: center;
+	}
+	.page2 .page2_in_div1 p
+	{
+		font-size: 15px;
+	}
+	.content .content_div p 
+	{
+		font-size: 15px;
+	}
+	.content_div
+	{
+		height: auto;
+		padding-bottom: 2rem;
+	}
+	.rank_nav
+	{
+		width: 100%;
+		height: auto;
+	}
+	.rank_nav h1 
+	{
+		font-size: 3rem;
+	}
+	.rank_nav .odi_rank
+	{
+		width: 100%;
+		height: auto;
+	}
+	.rank_nav .odi_rank1 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.rank_nav .odi_rank2 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.rank_nav .odi_rank3 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}	
+}
+
+@media(max-width:991px)
+{
+	html 
+	{
+		font-size: 55%;
+	}
+	header
+	{
+		padding: 1.5rem 2rem;
+	}
+	header:hover
+	{
+		/*padding-top:1rem;*/
+		border-bottom: solid blue .1rem;
+	}
+	 .page2 .page2_in_div1
+	 {
+	 	width: 100%;
+	 	background-color: darkred;
+	 }
+	.page2 img
+	{
+		 display:none;
+	}
+}
+@media (max-width: 780px)
+{
+	/*navbar media query*/
+	#box h1
+	{
+		font-size: 30px;
+	}
+	#nav .icons #menu
+	{
+		display: inline-block;
+	}
+	#nav .navbar
+	{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #eee;
+		clip-path: polygon(0 0,100% 0,100% 0,0 0);
+	}
+	#nav .navbar.active
+	{
+		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+	}
+	#nav .navbar a
+	{
+		display: block;
+		color:white;
+		font-size:2rem;
+		border-bottom: solid white .1rem;
+		text-align: center;
+		height: 4rem;
+		background-color:#8c8d8c;
+		padding-top:1rem;
+	}
+	.page1_in_div
+	{
+		height: auto;
+	}
+	.page1_in_div h1
+	{
+		font-size:5rem;
+	}
+	.page1_in_div p
+	{
+		font-size:2rem;
+	}
+	 .page2 .page2_in_div1
+	{
+		width: 100%;
+		/*background-color: lightblack;*/
+	}
+	.page2 img
+	{
+		 display:none;
+	}
+}
+
+/*=======================page1==========================================*/
+.nav-change
+{
+	background: red;
+}
+.page1
+{	
+	width: 100%;
+    height:68rem;
+    overflow: hidden;
+    position: relative;
+    background-image: url(https://spektacom.com/blog/media/posts/8/1200px-2017-18_WNCL_NSWB_v_ACTM_17-11-26_Healy_01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+    overflow-x:hidden;
+    /*position: relative; */
+    /*top:8rem;  */
+    
+}
+@keyframes change{
+    0%
+    {
+        
+        background-image: url(https://spektacom.com/blog/media/posts/8/1200px-2017-18_WNCL_NSWB_v_ACTM_17-11-26_Healy_01.jpg);
+        : 0.5;
+    }
+    30%
+    {
+        background-image: url(https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2022/01/16/clipboard-2022-01-15t185503018-1071396-1642273119.jpg?itok=a-6miMzt);
+        : 0.5;
+    }
+    70%
+    {
+        background-image: url(https://resources.pulse.icc-cricket.com/photo-resources/2022/06/23/f7ac7daa-2b6a-468e-95f9-ad7b9448cdb5/GettyImages-1208341993.jpg?width=600&height=338);
+        : 0.5;
+    }
+    100%
+    {
+        background-image: url(https://i.guim.co.uk/img/media/2a0ec5ec3afba909a44d2a7b36c3ff8c7025e058/0_193_5472_3283/master/5472.jpg?width=1200&quality=85&auto=format&fit=max&s=3f36fd93cdd15c323885b2a816d12f63);
+        
+    }
+}
+.page1_in_div
+{
+	width:60%;
+	height:auto;
+	background-color:#8c8c8c;
+	/*margin: auto;*/
+	position: relative;
+	top:10rem;
+}
+.page1_in_div h1 
+{
+	font-size:8rem;
+	color:white;
+	text-align:left;
+	padding:.5rem;
+	margin-top:8rem;
+	line-height:1;
+	margin-left: 8rem;
+	position: relative;
+	top: 5rem;
+	/*font-family: Brush Script MT;*/
+}
+.page1_in_div p 
+{
+	font-size:2.5rem;
+	color:white;
+	text-align:left;
+	padding:5rem;
+	margin-top:-5rem;
+	margin-left: 5rem;
+	position: relative;	
+	top: 5rem;
+	padding-bottom: 10rem;
+	/*font-family:Brush Script MT;*/
+}
+.page2
+{
+	width: 100%;
+	height: auto;
+	background-color:#8c8c8c;
+	transition: 5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: 10rem;
+}
+.page2_in_div1
+{
+	width:88rem;
+	height: auto;
+	/*background-color: #FFDEDE;*/
+	padding:5rem;
+    float: left;
+
+}
+.page2_in_div1 h1
+{
+	font-size:7rem;
+	text-align: left;
+	/*margin-top: 8rem;*/
+	margin-left:4%;
+	color: white;
+}
+.page2_in_div1 p 
+{
+	font-size:1.7rem;
+	text-align: left;
+	padding:3rem;
+	color: white;
+	line-height: 2.3rem;
+}
+.button9
+{
+	width: 20rem;
+	height: 5rem;
+	font-size:1.5rem;
+	margin-left:4%;
+	color: white;
+}
+.page2 img 
+{
+	width: 35%;
+	height:auto;
+	padding: 5rem;
+	transition:3s;
+	 float: left;
+	  position: relative;
+	right: -55rem;
+}
+ .page2 :hover  
+{
+	position: relative;
+	right: 0rem;
+}
+.page2:hover img
+{
+	position: relative;
+	right: 0rem;
+}
+
+@media (max-width: 1115px)
+{
+	.page2
+	{
+		width: 100%;
+		display: inline-block;
+	}
+	.page2_in_div1
+	{
+		width: 71rem;
+	}
+	.page2 img 
+	{
+		height: 100%;
+		margin-top: 10rem;
+	}
+
+}
+.page3 
+{
+	width: 100%;
+	height: auto;
+	background-color: #76BA99;
+}
+.parallax-slide {
+	width: 100%;
+  height: 100vh;
+}
+.content-slide {
+	width: 100%;
+
+  height: 100vh;
+  background: #fff;
+  text-align: center;
+}
+
+#parallax1 
+{
+	width: 100%;
+  	background: url('https://wallpaperaccess.com/full/1088620.jpg') 
+  	no-repeat center;
+  	background-attachment: fixed;
+}
+.content
+{
+	width:100%;
+	height:auto;
+	/*background-color: darkgoldenrod;*/
+
+}
+.content_div
+{
+	width: 97%;
+	height:45rem;
+	background-color: #CFD2CF;
+	margin: 2rem 2rem 2rem 2rem;	
+	box-shadow: 2rem;
+	box-shadow: var(--box-shadow);
+
+}
+.content_div1
+{
+	/*background-image: url(https://s3.amazonaws.com/html5.powershow.com/9262268/data/img0.png);*/
+    background-size: cover;
+    background-position: center;
+}
+.content_div2
+{
+	/*background-image: url(https://s01.sgp1.cdn.digitaloceanspaces.com/article/142640-rsmjcfxvnn-1591722832.jpg);*/
+	background-size: cover;
+    background-position: center;
+
+}
+.content_div3
+{
+	/*background-image: url(https://thevocalnews.com/wp-content/uploads/2021/06/ICC-Test-mace.jpg);*/
+	background-size: cover;
+    background-position: center;
+
+}
+
+.content_div h1
+{
+	font-size: 5rem;
+	/*text-align: left;*/
+	position: relative;
+	top: 4rem;
+	color: black;
+
+}
+.content_div p 
+{
+	font-size: 2rem;
+	text-align:justify;
+	padding: 5rem;
+	color: black;
+}
+.content_div .button9
+{
+	margin-left: 40%;
+	border: black solid .1rem;
+	color: black;
+	font-size: 2rem;
+	box-shadow:1rem;
+}
+
+@media(max-width:991px)
+{
+	.content
+	{
+		width: 100%;
+		/*margin-right: 5rem;*/
+	}
+	.content_team_list .team_list
+	{
+		width: 100%;
+		display: none;
+	}
+	.content_team_list
+	{
+		width: 100%;
+		display: block;
+	}
+	.content_div
+	{
+		height: auto;
+		padding-bottom: 2rem;
+	}
+}
+@media (max-width: 780px)
+{
+	.content
+	{
+		width: 100%;
+		margin-top: 0;
+	}
+	.content_team_list
+	{
+		width: 100%;
+		display: block;
+	}
+	.content .content_div1,.content_div2,.content_div3
+	{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.content_div
+	{
+		height: auto;
+		padding-bottom: 2rem;
+	}
+	
+}
+
+.team_list
+{
+	width: 30%;
+	height: auto;
+	background-color: #8c8c8c;
+	display:block;
+}
+.content_team_list
+{
+	width: 100%;
+	height:145rem;
+	background-color: red;
+}
+
+@media (max-width: 780px)
+{
+	.rank_nav
+	{
+		width: 100%;
+		height: auto;
+	}
+	.rank_nav h1 
+	{
+		font-size: 5rem;
+	}
+	.rank_nav .odi_rank
+	{
+		width: 100%;
+		height: auto;
+	}
+	.rank_nav .odi_rank1 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.rank_nav .odi_rank2 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.rank_nav .odi_rank3 
+	{
+		width: 100%;
+		margin-left: 0;
+		padding: 2rem;
+	}
+}
+
+.rank_nav
+{
+	width: 100%;
+	height:70rem;
+	/*background-color: blue;*/
+}
+.rank_nav h1
+{
+	font-size: 4rem;
+	background-color: darkred;
+	color: white;
+}
+.odi_rank
+{
+	width: 25%;
+	height: auto;
+	float: left;
+	background-color:;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: inline-block;
+
+}
+.odi_rank1
+{
+	/*background-image: url(https://cdnb.artstation.com/p/assets/images/images/027/192/795/large/debayan-dalal-view-1.jpg?1590849579);*/
+	background-size: cover;
+	background-color: white;
+	color: black;
+    /*: .7;*/
+    /*background-position: center;*/
+    margin-left: 15rem;
+}
+.odi_rank2
+{
+	/*background-image: url(https://imgeng.jagran.com/images/2021/oct/06_10_2021-t20_world_cup_2021_220882171634463679096.jpg);*/
+	background-size: cover;
+	background-color: white;
+	color:black ;
+    /*: .7;*/
+    /*background-position: center;*/
+}
+.odi_rank3
+{
+	/*background-image: url(https://thevocalnews.com/wp-content/uploads/2021/06/ICC-Test-mace.jpg);*/
+	background-size: cover;
+	background-color: white;
+	color: black;
+    /*: .7;*/
+    /*background-position: center;*/
+}
+.odi_rank h2
+{
+	font-size: 3rem;
+	text-align: center;
+	border: white solid 0.3rem;
+	color: white;
+
+}
+.odi_rank table 
+{
+	width: 100%;
+	height:40rem;
+	color: black;
+	border-collapse: collapse;
+}
+.odi_rank table tr th 
+{
+	border: black solid .1rem;
+	font-size:2rem;
+}
+.odi_rank table tr td
+{
+	border: black solid .1rem;
+	font-size: 2rem;
+	text-align: center;
+	/*padding: 5rem;*/
+}
+.odi_rank table tr:hover
+{
+	
+	background-color: white;
+	color: black;
+}
+.odi_rank p 
+{
+	color: black;
+}
+.button13
+{
+	width: 90%;
+	height: 4rem;
+	font-size: 2rem;
+	border: black solid .1rem;
+	margin: 2rem;
+	color: black;
+}
+ .rank_nav .odi_rank table tr td
+ {
+ 	border: none;
+ 	border-bottom: solid .1rem black;
+ 	/*border:solid black .1rem;*/
+ 	height:8rem;
+ }
+  .rank_nav .odi_rank table 
+ {
+ 	border:solid black .1rem;
+	height: 2rem;
+}
+
+.odi_rank table tr:hover .td1
+{
+	background-color:black;
+	color: white;
+	border: none;
+	/*border-radius: 2rem;*/
+}
+.odi_rank table tr:hover .td2
+{
+	background-color:#89d8f2;
+	border: none;
+	/*border-radius: 2rem;*/
+	color: white;
+
+
+}
+.odi_rank table tr:hover .td3
+{
+	background-color:green;
+	color: black;
+	border: none;
+	/*border-radius: 2rem;*/
+
+}
+.odi_rank table tr:hover .td4
+{
+	background-color:#07249b;
+	color: black;
+	border: none;
+	/*border-radius: 2rem;*/
+
+}
+.odi_rank table tr:hover .td5
+{
+	background-color:darkgreen;
+	color: black;
+	border: none;
+	/*border-radius: 2rem;*/
+
+}
+.odi_rank table tr:hover .td6
+{
+	background-color:#e6d500;
+	color: black;
+	border: none;
+	/*border-radius: 2rem;*/
+
+}
+.rank_nav .odi_rank table tr .td1 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td2 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td3 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td4 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td5 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td6 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td7 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td8 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td9 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank table tr .td10 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.rank_nav .odi_rank h2 
+{
+  	font-size:4rem;
+  	background-image: url(https://www.sheilds.org/wp-content/uploads/2015/06/meettheteam.png);
+  	background-size: cover;
+  	background-repeat: no-repeat;
+}
+.woman_rank
+{
+	width: 100%;
+	height: auto;
+	background-color:dimgray;
+}
+.woman_rank .odi_rank table tr td
+ {
+ 	border: none;
+ 	border-bottom: solid .1rem black;
+ 	/*border:solid black .1rem;*/
+ 	height:8rem;
+ }
+.woman_rank .odi_rank table 
+ {
+ 	border:solid black .1rem;
+	height: 2rem;
+}
+.woman_rank .odi_rank table tr .td1 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .5rem;
+}
+.woman_rank .odi_rank table tr .td2 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .1rem;
+
+}
+.woman_rank .odi_rank table tr .td1 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .1rem;
+
+}
+.woman_rank .odi_rank table tr .td3 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .1rem;
+
+}
+.woman_rank .odi_rank table tr .td4 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .1rem;
+
+}
+.woman_rank .odi_rank table tr .td5 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		border-radius: .1rem;
+
+}
+.woman_rank .odi_rank table tr .td6 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.woman_rank .odi_rank table tr .td7 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+}
+.woman_rank .odi_rank table tr .td8 img 
+{
+		width: 3rem;
+		height: 2rem;
+		position: relative;
+		left: 5rem;
+		padding: .3rem;
+		background-color: red;
+}
+.woman_rank .odi_rank table tr:hover .td8
+{
+	background-color:#640f22;
+}
+.woman_rank .odi_rank table tr .td9 img 
+{
+		width: 4rem;
+		height: 3rem;
+		position: relative;
+		left: 5rem;
+}
+.woman_rank h1 
+{
+	font-size: 4rem;
+	background-color: darkred;
+	color: white;
+}
+.woman_rank .odi_rank1 
+{
+	margin-left: 32rem;
+}
+.woman_rank .odi_rank2 
+{
+	margin-left: 4rem;
+}
+@media(max-width:480px)
+{
+	.woman_rank
+	{
+		width: 100%;
+		height: auto;
+	}
+	.woman_rank h1 
+	{
+		font-size: 3rem;
+	}
+	.woman_rank .odi_rank1
+	{
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.woman_rank .odi_rank2
+	{
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		padding: 2rem;
+	}
+}
+@media(max-width:780px)
+{
+	.woman_rank
+	{
+		width: 100%;
+		height: auto;
+	}
+	.woman_rank h1 
+	{
+		font-size: 5rem;
+	}
+	.woman_rank .odi_rank1
+	{
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		padding: 2rem;
+	}
+	.woman_rank .odi_rank2
+	{
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		padding: 2rem;
+	}
+}
+.page4 
+{
+	width: 100%;
+	height: auto;
+	background-color: #90C8AC;
+}
+.space
+{
+	width: 100%;
+	height: 100rem;
+}
+.main_div
+{
+	width: 100%;
+	height:100rem;
+	/*background-color: yellow;*/
+	
+	position:relative;
+	top:70rem;
+}
+:root {
+	--card-height:50vw;
+	--card-margin: 4vw;
+	--card-top-offset: 8rem;
+	--numcards: 4;
+	--outline-width: 0px;
+}
+#cards {
+	width: 90%;
+	position: relative;
+	left: 5%;
+	/*background-color: darkred;*/
+	padding-bottom: calc(var(--numcards)
+   *var(--card-top-offset)); 
+	margin-bottom: var(--card-margin);
+	padding: 2rem;
+	padding-left: -5rem;
+}
+.card {
+	overflow: hidden;
+	margin-top: -60rem;
+	/*background-color: blue;*/
+	position: sticky;
+	top: 0;
+	padding-top: var(--card-top-offset);
+	transform-origin: 10% 0%;
+	will-change: transform;
+}
+.card h1
+{
+	font-size: 3rem;
+	text-align: center;
+	font-family: arial;
+	margin-top: -8rem;
+}
+#debug 
+{
+  position: fixed;
+  top: 1em;
+  left: 1em;
+
+}
+#debug::after
+{
+  content: " Show Debug";
+  margin-left: 1.5em;
+  color: white;
+  white-space: nowrap;
+}
+#debug:checked ~ main {
+  --outline-width: 1px;
+}
+#cards {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid blue;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	gap: var(--card-margin);
+}
+
+.card {
+	outline: var(--outline-width) solid hotpink;
+}
+.card h4
+{
+	background-color: white;
+	font-size: 3rem;
+	text-align: center;
+}
+
+
+.card__content {
+	width:90%;
+	box-shadow:1rem 0.1rem 1rem 1rem rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1rem;
+	overflow: hidden;
+  	display: grid;
+	grid-template-areas: "text";
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	align-items: stretch;
+	outline: var(--outline-width) solid lime;
+	background-color: #FEFBF6;
+}
+.card__content
+{
+	grid-area: text;
+	width:100%;
+	place-self: center;
+	text-align: left;
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+.card__content button  
+{
+	width: 20%;
+	color: white;
+	padding: 1rem;
+	font-size: 2rem;
+	margin: 2rem 0rem 0 2rem;
+	background-color: blue; /* For browsers that do not support gradients */
+  background-image: radial-gradient(blue,white);
+}
+.card__content table
+{
+	width: 100%;
+	height: auto;
+	/*border: solid black .1rem;*/
+	border-collapse: collapse;
+	text-align: center;
+	/*background-color: #CFD2CF;*/
+	margin-top: -1rem;
+	border-radius: 1rem;
+}
+.card__content table tr th 
+{
+	border-bottom: solid black .1rem;
+	font-size: 3rem;
+	height: 6rem;
+}
+.card__content table tr td 
+{
+	/*border: solid black .1rem;*/
+	font-size:2rem;
+	height: 5rem;
+}
+.card__content table tr:hover
+{
+	background-color: #4391d8;
+	color: white;
+}
+.card__content table tr td:hover
+{
+	 text-decoration: underline;
+} 
+
+.th_img1 img 
+{
+	width:5rem;
+	height: 4rem;
+	padding: .2rem;
+	border-radius: 1rem;
+	margin: auto;
+	float: left;
+	margin-left: 10rem;
+}
+.th_img1 h3
+{
+	float: left;
+} 
+
+.th2
+{
+	width: 100%;
+	border-radius: 2rem;
+	background-image: url(https://www.sheilds.org/wp-content/uploads/2015/06/meettheteam.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.th_div
+{
+	width: 100%;
+	height: auto;
+	background-color:#f0f0f0;
+
+} 
+.th_div_img1
+{
+	width: 20%;
+	height: 16rem;
+	/*background-color:#3CCF4E;*/
+	float: left;
+	margin-left: 5rem;
+}
+.th_div_img1 h1
+{
+	position: relative;
+	top: 10rem;
+	right: 5rem;
+	color: white;
+	font-size:4rem;
+}
+.th_div_img1 img
+{
+	width: 60%;
+	margin: 1rem;
+	border-radius: 1rem;
+	position: relative;
+	/*top: 6rem;*/
+	left: 15rem;
+}
+.th_div_h2
+{
+	width: 30%;
+	height: 16rem;
+	/*background-color: #3CCF4E;*/
+	float: left;
+	margin-left: 5rem;
+}
+.th_div_img2
+{
+	width: 20%;
+	height: 16rem;
+	/*background-color: #3CCF4E;*/
+	float: left;
+	margin-left:10rem;
+	overflow: hidden;
+}
+.th_div_h2 h2
+{
+	font-size: 2rem;
+	margin-top: 10rem;
+	color: white;
+	position: relative;
+	left: 28rem;
+}
+.th_div_h2 h3
+{
+	font-size: 1.5rem;
+	/*margin-top: 4rem;*/
+	color: white;
+	position: relative;
+	left: 28rem;
+}
+
+@media(max-width:480px)
+{
+	.main_div
+	{
+		display: none;							
+	}
+}
+@media(max-width:780px)
+{
+	.main_div
+	{
+		display: none;
+	}
+}
+.world_cup_win
+{
+	position: relative;
+	top: 200rem;
+}
+.world_cup_win table
+{
+	width: 90%;
+	border-color:red;
+	font-size:15px;
+	font-family: arial;
+	text-align: center;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+@media(max-width:480px)
+{
+	.world_cup_win
+{
+	position: relative;
+	top: -230rem;
+}
+}
+.footer
+{
+	width:100%;
+	height: 50rem;
+	background-color: #000000;
+	position: relative;
+	top: 210rem;
+}
+.footer_div
+{
+	width: 44rem;
+	height: 100%;
+	background-color: gray;
+	float: left;
+	margin-left: 1rem;
+}
+.footer_div h1
+{
+	font-size: 3rem;
+	font-family: arial;
+	margin-top: 5rem;
+	color: white;
+	text-align: left;
+	margin-left: 3rem;
+}
+.footer_div p 
+{
+	font-size: 1.5rem;
+	color: white;
+	text-align: left;
+	margin-top: 3rem;
+	margin-left: 3rem;
+}
+.footer_div ion-icon
+{
+	font-size: 2rem;
+	color: white;
+	margin-top: 2rem;
+	margin-left: 3rem;
+}
+.footer_div span ion-icon 
+{
+	margin-top: -.1rem;
+}
+
+

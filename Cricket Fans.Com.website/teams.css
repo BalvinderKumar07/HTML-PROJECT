@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+	--light-red: rgba(200, 35, 54, .9);
+	--black: #000;
+	--box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+	font-family: 'arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all .2s linear;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+	width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	border-radius: 4rem;
+}
+
+body {
+	background: var(--bg);
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: darkred;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+#myBtn ion-icon {
+	font-size: 45rem;
+	background-color: white;
+}
+
+#myBtn:hover {
+	background-color: #555;
+	opacity: 0.8;
+}
+
+.team_nav {
+	width: 100%;
+	height: auto;
+	background: transparent;
+	/*background-color: darkred;*/
+	position: relative;
+	top: 8rem;
+	padding: 2rem;
+}
+
+.team_nav button {
+	width: 8%;
+	height: auto;
+	padding: 1rem;
+	margin-left: 5%;
+	font-size: 1.5rem;
+}
+
+.team_nav button:hover {
+	background-color: #0096FF;
+	color: white;
+}
+
+.team_div {
+	width: 40rem;
+	height: 40rem;
+	background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2019-06/30/full/1561836318-5094.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 10rem;
+	margin: 2.5rem;
+	float: left;
+	overflow: hidden;
+	border-radius: 1rem;
+	box-shadow: 2rem 2rem 0rem 0rem #fbcd2f;
+	background-position: center;
+
+}
+
+.team_hover {
+	width: 100%;
+	height: 100%;
+	background-color: #fbcd2f;
+	position: relative;
+	bottom: 50rem;
+	overflow: hidden;
+	transition: 1.5s;
+	/*opacity: 0.5;*/
+}
+
+.team_hover1 {
+	background-color: #4483e0;
+}
+
+.team_hover2 {
+	background-color: #004a0f;
+}
+
+.team_hover3 {
+	background-color: #00175e;
+}
+
+.team_hover4 {
+	background-color: #231f20;
+}
+
+.team_hover5 {
+	background-color: #00acd7;
+}
+
+.team_hover6 {
+	background-color: #468f3e;
+}
+
+.team_hover7 {
+	background-color: #7e1041;
+}
+
+.team_hover8 {
+	background-color: #42701e;
+}
+
+.team_hover9 {
+	background-color: #2e8ffd;
+}
+
+.team_hover10 {
+	background-color: #009f94;
+}
+
+.team_hover11 {
+	background-color: #c41019;
+}
+
+.team_div:hover {
+	box-shadow: none;
+}
+
+.team_div:hover .team_hover {
+	bottom: 0;
+	margin-top: -18rem;
+}
+
+.team_div h2 {
+	color: white;
+	font-size: 3rem;
+	position: relative;
+	right: 20rem;
+	top: 35rem;
+	transition: 1.5s;
+}
+
+.team_div:hover h2 {
+	right: 0;
+	margin-left: 1rem;
+
+}
+
+.team_div img {
+	width: 20%;
+	height: 13%;
+	border-radius: 1rem;
+	position: relative;
+	left: 40rem;
+	top: 29rem;
+	transition: 1.5s;
+	/*opacity: 0.5;*/
+}
+
+.team_div:hover img {
+	left: 30.5rem;
+}
+
+.min_nav_div {
+	width: 100%;
+	height: 8.5rem;
+	background-color: black;
+}
+
+.team_hover .white {
+	width: 60%;
+	height: 60%;
+	/*background-color: black;*/
+	border-radius: 50%;
+	position: relative;
+	top: 13rem;
+	left: 10rem;
+	/*opacity:5;*/
+}
+
+.team_hover .white img {
+	width: 90%;
+	height: 90%;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+	top: .1rem;
+	left: .1rem;
+	padding: 1rem;
+	/*opacity:0.9;*/
+}
+
+.team_div2 {
+	box-shadow: 2rem 2rem 0rem 0rem #4483e0;
+	background-image: url(https://wallpaperaccess.com/full/1950262.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div3 {
+	box-shadow: 2rem 2rem 0rem 0rem #004a0f;
+	background-image: url(https://dailytimes.com.pk/assets/uploads/2022/04/13/pb3oJeql.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div4 {
+	box-shadow: 2rem 2rem 0rem 0rem #00175e;
+	background-image: url(https://media.gqindia.com/wp-content/uploads/2019/05/England-top-image-01.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div5 {
+	box-shadow: 2rem 2rem 0rem 0rem #231f20;
+	background-image: url(https://resources.stuff.co.nz/content/dam/images/1/u/o/7/t/b/image.related.StuffLandscapeSixteenByNine.710x400.1uo9do.png/1562638792355.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
+}
+
+.team_div6 {
+	box-shadow: 2rem 2rem 0rem 0rem #00acd7;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/SL.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div7 {
+	box-shadow: 2rem 2rem 0rem 0rem #468f3e;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/SA.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div8 {
+	box-shadow: 2rem 2rem 0rem 0rem #7e1041;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/WI.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div8 img {
+	padding: .5rem;
+	background-color: white;
+}
+
+.team_div9 {
+	box-shadow: 2rem 2rem 0rem 0rem #42701e;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/IRE.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div10 {
+	box-shadow: 2rem 2rem 0rem 0rem #2e8ffd;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/AFG.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div11 {
+	box-shadow: 2rem 2rem 0rem 0rem #009f94;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/BAN.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.team_div12 {
+	box-shadow: 2rem 2rem 0rem 0rem #c41019;
+	background-image: url(https://resources.pulse.icc-cricket.com/ICC/teams/thumbnail/men/ZIM.png);
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+@media(max-width:480px) {
+	.team_nav button {
+		width: 20%;
+		height: auto;
+		position: 1rem;
+	}
+}

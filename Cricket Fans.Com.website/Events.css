@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+	--light-red: rgba(200, 35, 54, .9);
+	--black: #000;
+	--box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all .2s linear;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+	width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	border-radius: 4rem;
+}
+
+body {
+	background: var(--bg);
+}
+
+.event {
+	width: 100%;
+	height: auto;
+	background: yellow;
+}
+
+.event_in_div {
+	width: 25%;
+	height: 40rem;
+	/*background-color: lightblue;*/
+	float: left;
+	margin-left: 9rem;
+	margin-top: 10rem;
+	box-shadow: 10px lightblue;
+	border-radius: 5rem;
+
+
+}
+
+.event_in_div_img {
+	width: 100%;
+	height: 33rem;
+	/*background-color: darkred;*/
+	border-radius: 5rem;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 10px 10px 5px lightblue;
+}
+
+.event_in_div h1 {
+	font-size: 2rem;
+	vertical-align: sub;
+	font-family: arial;
+	letter-spacing: -.1rem;
+	margin-top: 1rem;
+	color: #192b53;
+}
+
+.event_in_div h1:hover {
+	color: #4391d8;
+}
+
+.event_in_div_img img {
+	max-width: 100%;
+	height: auto;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.event_in_div_img:hover img {
+	-moz-transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.div_img2 img {
+	position: relative;
+	bottom: 5rem;
+}
+
+.div_img4 img {
+	position: relative;
+	top: 5rem;
+}
+
+.div_img5 img {
+	width: 60%;
+	height: 70%;
+	position: relative;
+	left: 7rem;
+	top: 5rem;
+}
+
+.div_img6 img {
+	position: relative;
+	bottom: 5rem;
+}
+
+.div_img9 img {
+	position: relative;
+	left: 2rem;
+}
+
+@media(max-width:780px) {
+	.event {
+		width: 100%;
+		height: auto;
+	}
+
+	.event .event_in_div {
+		width: 40%;
+		margin-left: 5rem;
+	}
+}
+
+@media(max-width:480px) {
+	.event {
+		width: 100%;
+		height: auto;
+	}
+
+	.event .event_in_div {
+		width: 70%;
+		margin-left: 6rem;
+	}
+}

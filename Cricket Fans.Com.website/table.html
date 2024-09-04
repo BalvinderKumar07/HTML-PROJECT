@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>icc ranking page</title>
+
+    <link rel="stylesheet" type="text/css" href="abc.css">
+
+    <link rel="stylesheet" type="text/css" href="table.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="framwork.css">
+
+    <link href="https://unpkg.com/tailwindcss@1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/tailwindcss@1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="logo.css">
+</head>
+
+<body>
+    <header id="nav">
+        <h1>Cricket fans.com</h1>
+        <nav class="navbar navbar2">
+            <a href="file:///C:/Users/hp/Desktop/html/abc.html#home" class="active">Home</a>
+            <a href="file:///C:/Users/hp/Desktop/html/Events.html">Events</a>
+            <a href="file:///C:/Users/hp/Desktop/html/teams.html">Teams</a>
+            <a href="https://circketfans07.blogspot.com/" target="block">Blog</a>
+        </nav>
+        <div class="icons">
+            <i class="fab fa-facebook" id="facebook"></i>
+            <i class="fab fa-twitter" id="twitter"></i>
+            <i class="fab fa-instagram" id="instagram"></i>
+            <i class="fas fa-bars" id="menu"></i>
+        </div>
+    </header>
+    <script type="text/javascript">
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+    <h1>Man's Ranking</h1>
+    <div class="gander">
+
+        <button style="background-color:  #4391d8; color: white;"><span onclick="openNav()">&#9776;
+                Men's</span></button>
+        <a href="file:///C:/Users/hp/Desktop/html/women_ranking.html"><button onclick="myFunction()"><span
+                    onclick="openNav()">&#9776; Women's</span></button></a>
+    </div>
+    <h1 id="demo"></h1>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Woman's Ranking";
+        }
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <div class="formate_btn">
+        <button style="background-color:  #4391d8; color: white;">TEST</button>
+        <a href="file:///C:/Users/hp/Desktop/html/odiRnakimg.html"><button>ODI</button></a>
+        <a href="file:///C:/Users/hp/Desktop/html/t20iRanking.html"><button>T20I</button></a>
+    </div>
+    <div class="table_content">
+        <div class="odi_rank odi_rank3">
+            <h2>TEST</h2>
+            <p>Last updated (GMT) - 05 Jul 2022</p>
+            <table>
+                <tr>
+                    <th width="20%">RANK</th>
+                    <th colspan="2">TEAMS</th>
+
+                    <th>MATCHES</th>
+                    <th>POINTS</th>
+                    <th>RATING</th>
+
+                </tr>
+                <tr>
+                    <td class="td6">1</td>
+                    <td class="td6"><img src="https://www.kobe-cufs.ac.jp/english/images/flag011.png"></td>
+                    <td class="td6">Australia</td>
+                    <td class="td6">19</td>
+                    <td class="td6">2439</td>
+                    <td class="td6">128</td>
+                </tr>
+                <tr>
+                    <td class="td4">2</td>
+                    <td class="td4"><img src="https://www.kobe-cufs.ac.jp/english/files/flag_india2.png"></td>
+                    <td class="td4">India</td>
+                    <td class="td4">29</td>
+                    <td class="td4">3318</td>
+                    <td class="td4">114</td>
+                </tr>
+                <tr>
+                    <td class="td5">3</td>
+                    <td class="td5"><img src="https://cdn.britannica.com/27/4227-004-32423B42/Flag-South-Africa.jpg">
+                    </td>
+                    <td class="td5">South Africa</td>
+                    <td class="td5">21</td>
+                    <td class="td5">2306</td>
+                    <td class="td5">110</td>
+                </tr>
+                <tr>
+                    <td class="td2">4</td>
+                    <td class="td2"><img
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/255px-Flag_of_England.svg.png">
+                    </td>
+                    <td class="td2">England</td>
+                    <td class="td2">39</td>
+                    <td class="td2">3909</td>
+                    <td class="td2">100</td>
+
+                </tr>
+                <tr>
+                    <td class="td1">5</td>
+                    <td class="td1"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/255px-Flag_of_New_Zealand.svg.png">
+                    </td>
+                    <td class="td1">New Zealand</td>
+                    <td class="td1">27</td>
+                    <td class="td1">2704</td>
+                    <td class="td1">100</td>
+                </tr>
+                <tr>
+                    <td class="td3">6</td>
+                    <td class="td3"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/255px-Flag_of_Pakistan.svg.png">
+                    </td>
+                    <td class="td3"> Pakistan</td>
+                    <td class="td3">20</td>
+                    <td class="td3">1865</td>
+                    <td class="td3">93</td>
+                </tr>
+                <tr>
+                    <td class="td7">7</td>
+                    <td class="td7"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/255px-Flag_of_Sri_Lanka.svg.png">
+                    </td>
+                    <td class="td7"> Sri Lanka</td>
+                    <td class="td7">20</td>
+                    <td class="td7">1637</td>
+                    <td class="td7">82</td>
+                </tr>
+                <tr>
+                    <td class="td8">8</td>
+                    <td class="td8"><img
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Cricket_West_Indies_Logo_2017.png/150px-Cricket_West_Indies_Logo_2017.png">
+                    </td>
+                    <td class="td8">West Indies</td>
+                    <td class="td8">25</td>
+                    <td class="td8">1988</td>
+                    <td class="td8">80</td>
+                </tr>
+                <tr>
+                    <td class="td9">9</td>
+                    <td class="td9"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/255px-Flag_of_Bangladesh.svg.png">
+                    </td>
+                    <td class="td9">Bangladesh</td>
+                    <td class="td9">22</td>
+                    <td class="td9">1047</td>
+                    <td class="td9">48</td>
+                </tr>
+                <tr>
+                    <td class="td10">10</td>
+                    <td class="td10"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/255px-Flag_of_Zimbabwe.svg.png">
+                    </td>
+                    <td class="td10">Zimbabwe</td>
+                    <td class="td10">6</td>
+                    <td class="td10">148</td>
+                    <td class="td10">25</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="rank_nav_table">
+
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onmouseover="closeNav()">&times;</a>
+        <a href="#">Overview</a>
+        <a href="#">Team Rankings</a>
+        <a href="#">player Rankings</a>
+        <a href="#">About Ranking</a>
+    </div>
+</body>
+
+</html>
