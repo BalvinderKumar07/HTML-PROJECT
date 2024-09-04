@@ -1,0 +1,295 @@
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+        /*font-family: 'Roboto', sans-serif;*/
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: .3s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+
+        html::-webkit-scrollbar {
+            width: .8rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: var(--main-color);
+            border-radius: 4rem;
+        }
+
+        /* ================================ */
+        :root,
+        :root.light {
+            --color-bg: #ffffff;
+            --color-fg: #000000;
+            --card-bg-color: #fafafa;
+        }
+
+        :root.dark {
+            --color-bg: #000000;
+            --color-fg: #ffffff;
+            --card-bg-color: #000000;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-fg);
+        }
+
+        .card {
+            background-color: var(--card-bg-color) !important;
+        }
+
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background-color: #73C0FC;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider::before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+            left: 2px;
+            bottom: 2px;
+            background: #e8e8e8;
+            transition: .4s;
+            z-index: 2;
+        }
+
+        .sun svg {
+            position: absolute;
+            top: 6px;
+            left: 36px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        .moon svg {
+            fill: #73C0FC;
+            position: absolute;
+            top: 5px;
+            z-index: 1;
+            left: 5px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .sun svg {
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .moon svg {
+            animation: tilt 5s linear infinite;
+        }
+
+        @keyframes tilt {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .input:checked+.slider {
+            background-color: #183153;
+        }
+
+        .input:checked+.slider {
+            box-shadow: 0 0 1px #183153;
+        }
+
+        .input:checked+.slider::before {
+            transform: translateX(30px);
+        }
+
+        .btn {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            border: none;
+        }
+
+        .form-switch label {
+            position: absolute;
+            right: 40px;
+            top: 40px;
+        }
+
+        .cart {
+            width: 100%;
+            height: 120vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 50%;
+            height: 100%;
+            padding: 50px;
+            /* background: red; */
+        }
+
+        .image {
+            width: 100%;
+            height: 80%;
+            padding: 50px;
+            overflow: hidden;
+            /* background: green; */
+        }
+
+        .cart-img {
+            width: 100%;
+            height: 20%;
+            padding: 10px;
+            /* background: gray; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .img-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* background: #eee; */
+            overflow: hidden;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #div1 {
+            display: block;
+        }
+
+        .image-box {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .box2 {
+            padding: 100px;
+        }
+
+        .box2 h1 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        .box2 ion-icon {
+            font-size: 20px;
+            color: rgb(198, 198, 5);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box2 p {
+            font-size: 20px;
+            padding: 10px 0 0 0;
+            text-decoration: underline;
+        }
+
+        .box2 table {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .box2 table th,
+        td {
+            padding: 15px 15px 15px 0;
+            font-weight: 300;
+        }
+
+        .box2 button {
+            width: 45%;
+            padding: 13px 10px;
+            margin-top: 20px;
+            margin-right: 10px;
+            background: rgb(198, 198, 5);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .box2 button::before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3);
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            opacity: 0;
+        }
+
+        .box2 button:hover::before {
+            opacity: 1;
+        }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Light/Dark Mode Example</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <h1 id="title">Hello World!</h1>
+    <button id="toggle-mode">Toggle Mode</button>
+
+    
+    <script src="script.js"></script>
+
+    <script>
+        const body = document.querySelector("body");
+        const title = document.getElementById("title");
+        const toggleButton = document.getElementById("toggle-mode");
+
+        // Function to toggle between light and dark mode
+        function toggleMode() {
+            if (body.classList.contains("light-mode")) {
+                // Switch to dark mode
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                title.classList.remove("title-light");
+                title.classList.add("title-dark");
+                toggleButton.innerText = "Switch to Light Mode";
+            } else {
+                // Switch to light mode
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                title.classList.remove("title-dark");
+                title.classList.add("title-light");
+                toggleButton.innerText = "Switch to Dark Mode";
+            }
+        }
+
+        // Add event listener to the toggle button
+        toggleButton.addEventListener("click", toggleMode);
+
+    </script>
+</body>
+
+</html>
