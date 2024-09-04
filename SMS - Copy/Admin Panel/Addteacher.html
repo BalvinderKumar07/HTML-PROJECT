@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Teacher</title>
+
+    <!-- Form CSS Style File Link -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+    <div class="form-container">
+        <form id="registration-form" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div>
+                    <label>Teacher Name:</label>
+                    <input type="text" name="teacher_name" required>
+                </div>
+                <div>
+                    <label>Subject:</label>
+                    <select name="subject" required>
+                        <option value="Wed development">Wed development</option>
+                        <option value="Basci Computer">Basci Computer</option>
+                        <option value="CCC">CCC</option>
+                        <option value="Ecc">Ecc</option>
+                        <option value="Tellay">Tellay</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label>Join Date:</label>
+                    <input type="date" name="join_date" required>
+                </div>
+                <div>
+                    <label>Teacher Image:</label>
+                    <input type="file"name="teacher_image" accept="image/*" required>
+                </div>
+            </div>
+            
+            
+            
+                
+            
+            <div class="form-group">
+                <button type="submit">Add Teacher</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+            // Validate fields
+            function validateTextField(id, errorId) {
+                const input = document.getElementById(id);
+                const errorDiv = document.getElementById(errorId);
+                if (/[^a-zA-Z\s]/.test(input.value)) {
+                    errorDiv.textContent = 'Only letters are allowed';
+                    isValid = false;
+                }
+            }
+
+            validateTextField('student-name', 'student-name-error');
+            validateTextField('father-name', 'father-name-error');
+            validateTextField('mother-name', 'mother-name-error');
+            validateTextField('course-name', 'course-name-error');
+
+            // Validate Mobile Number
+            const mobileNumber = document.getElementById('mobile-number');
+            const mobileNumberError = document.getElementById('mobile-number-error');
+            if (!/^\d{10}$/.test(mobileNumber.value)) {
+                mobileNumberError.textContent = 'Mobile number must be 10 digits';
+                isValid = false;
+            }
+
+            // Validate Aadhar Number
+            const aadharNumber = document.getElementById('aadhar-no');
+            const aadharNumberError = document.getElementById('aadhar-no-error');
+            if (!/^\d{12}$/.test(aadharNumber.value)) {
+                aadharNumberError.textContent = 'Aadhar number must be 12 digits';
+                isValid = false;
+            }
+
+            // Validate Course Fee
+            const courseFee = document.getElementById('course-fee');
+            const courseFeeError = document.getElementById('course-fee-error');
+            if (!/^\d+$/.test(courseFee.value)) {
+                courseFeeError.textContent = 'Course fee must be a number';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>service page </title>
+	<style>
+		:root 
+		{
+			--main-color: #e9204f;
+			--black: #191919;
+			--bg: #101010;
+			--font: #fff;
+			--border: .1rem solid rgba(255, 255, 255, .3);
+			--text: rgb(68 87 96);
+		}
+
+		*
+		{
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			outline: none;
+			border: none;
+			text-decoration: none;
+			text-transform: capitalize;
+		}
+		body
+		{
+			background-color: var(--bg);
+			transition: 1s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box-container
+		{
+			width: 1000px;
+			height:auto;
+			/*background-color: #232323;*/
+			margin-top: 70px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition: .5s;
+		}
+		.box-container .box
+		{
+			width:300px;
+			height: 450px;
+			display: block;
+			transition: .5s;
+		}
+		.image
+		{
+			width:100%;
+			height: 250px;
+			background: var(--black);
+			position: relative;
+			top: -180px;
+			transition: .5s;
+			 box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+			 cursor: pointer;
+		}
+		.image img
+		{
+			width: 100px;
+			height: 100px;
+		}
+		  .box-container .box:hover .image
+		{
+			transform: translateY(-20px);
+		}
+		.content
+		{
+			width:100%;
+			height: 200px;
+			background-color: white;
+			transition: .5s;
+			overflow: hidden;
+			position: relative;
+			top: 20px;
+		}
+		.box-container .box:hover .content
+		{
+			transform: translateY(230px);
+		}
+		.box-container .box:hover {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 50px #03e9f4;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+   .box-container .box:nth-child(1) {
+        filter: hue-rotate(270deg);
+    }
+
+    .box-container .box:nth-child(2) {
+        filter: hue-rotate(110deg);
+    }
+    .content h3
+    {
+    	text-align: center;
+    	margin-top: 20px;
+    }
+    .content p 
+    {
+    	font-size: 15px;
+    	text-align: center;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    	margin-top: 20px;
+    	color: var(--text);
+    }
+    .content button
+    {
+    	width: 100px;
+    	height: 30px;
+    	background: var(--black);
+    	font-size: 15px;
+    	margin-top: 20px;
+    	color: var(--font);
+    	cursor: pointer;
+    }
+    .box-container .box .content button:hover 
+    {
+    	background-color: #03e9f4;
+    } 
+	</style>
+</head>
+<body>
+		<div class="box-container">
+			<div class="box">
+				<div class="content">
+					<h3>Window</h3>
+
+					<p>Window makes it easy to find what you need, stay organized, and take on any task. Its clear</p>
+
+					<center><button>know more</button></center>
+				</div>
+
+				<div class="image">
+					<img src="window1.png">
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="content">
+					<h3>Android</h3>
+
+					<p>android makes it easy to find what you need, stay organized, and take on any task. Its clear</p>
+
+					<center><button>know more</button></center>
+				</div>
+
+				<div class="image">
+					<img src="rty.png">
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="content">
+					<h3>MAC</h3>
+
+					<p>Mac makes it easy to find what you need, stay organized, and take on any task. Its clear</p>
+
+					<center><button>know more</button></center>
+				</div>
+
+				<div class="image">
+					<img src="mac.png">
+				</div>
+			</div>
+		</div>
+</body>
+</html>

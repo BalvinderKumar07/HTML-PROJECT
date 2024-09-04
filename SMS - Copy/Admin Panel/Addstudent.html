@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Student</title>
+
+    <!-- Form CSS Style File Link -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+    <div class="form-container">
+        <form id="registration-form" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div>
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name" name="student_name" required>
+                    <div id="student-name-error" class="error"></div>
+                </div>
+                <div>
+                    <label for="father-name">Father's Name:</label>
+                    <input type="text" id="father-name" name="father_name" required>
+                    <div id="father-name-error" class="error"></div>
+                </div>
+                <div>
+                    <label for="mother-name">Mother's Name:</label>
+                    <input type="text" id="mother-name" name="mother_name" required>
+                    <div id="mother-name-error" class="error"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div>
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mobile-number">Mobile Number:</label>
+                    <input type="text" id="mobile-number" name="mobile_number" required>
+                    <div id="mobile-number-error" class="error"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="aadhar-no">Aadhar Number:</label>
+                    <input type="text" id="aadhar-no" name="aadhar_no" required>
+                    <div id="aadhar-no-error" class="error"></div>
+                </div>
+                <div>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="general">General</option>
+                        <option value="obc">OBC</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                
+                <div>
+                    <label for="qualification">Qualification:</label>
+                    <input type="text" id="qualification" name="qualification" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="course-name">Course Name:</label>
+                    <input type="text" id="course-name" name="course_name" required>
+                    <div id="course-name-error" class="error"></div>
+                </div>
+                <div>
+                    <label for="date-of-join">Date of Join:</label>
+                    <input type="date" id="date-of-join" name="date_of_join" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="course-fee">Course Fee:</label>
+                    <input type="number" id="course-fee" name="course_fee" required>
+                    <div id="course-fee-error" class="error"></div>
+                </div>
+                <div>
+                    <label for="student-image">Student Image:</label>
+                    <input type="file" id="student-image" name="student_image" accept="image/*" required>
+                </div>
+            </div>
+            <div class="form-group">
+               
+                <div>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Add Student</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+            // Validate fields
+            function validateTextField(id, errorId) {
+                const input = document.getElementById(id);
+                const errorDiv = document.getElementById(errorId);
+                if (/[^a-zA-Z\s]/.test(input.value)) {
+                    errorDiv.textContent = 'Only letters are allowed';
+                    isValid = false;
+                }
+            }
+
+            validateTextField('student-name', 'student-name-error');
+            validateTextField('father-name', 'father-name-error');
+            validateTextField('mother-name', 'mother-name-error');
+            validateTextField('course-name', 'course-name-error');
+
+            // Validate Mobile Number
+            const mobileNumber = document.getElementById('mobile-number');
+            const mobileNumberError = document.getElementById('mobile-number-error');
+            if (!/^\d{10}$/.test(mobileNumber.value)) {
+                mobileNumberError.textContent = 'Mobile number must be 10 digits';
+                isValid = false;
+            }
+
+            // Validate Aadhar Number
+            const aadharNumber = document.getElementById('aadhar-no');
+            const aadharNumberError = document.getElementById('aadhar-no-error');
+            if (!/^\d{12}$/.test(aadharNumber.value)) {
+                aadharNumberError.textContent = 'Aadhar number must be 12 digits';
+                isValid = false;
+            }
+
+            // Validate Course Fee
+            const courseFee = document.getElementById('course-fee');
+            const courseFeeError = document.getElementById('course-fee-error');
+            if (!/^\d+$/.test(courseFee.value)) {
+                courseFeeError.textContent = 'Course fee must be a number';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

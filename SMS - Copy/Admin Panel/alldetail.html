@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Detail-Student</title>
+
+    <!-- Main Style File Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- BooStrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Admin Panel logo">
+        </div>
+        <div class="link">
+            <a href="index.html">All Student</a>
+            <a href="teacher.html">Teacher</a>
+            <a href="class.html">Class</a>
+            <a href="fee.html">Fee</a>
+        </div>
+        <div class="admin">
+            <button class="btn">LogOut</button>
+        </div>
+    </nav>
+
+    <div class="detail">
+        <div class="box">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <div class="img">
+                            <img src="/images/student1.jpg" alt="Student Image">
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="name">Gurpreet Kaur</th>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td>Raghubir Sing</td>
+                </tr>
+                <tr>
+                    <td>Mother Name</td>
+                    <td>Santosh Rani</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>Indachhoi,Tohana,Fatehabad</td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>06/11/2001</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>98120-35139</td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td>abc123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Aadhar No</td>
+                    <td>1234-4321-1234</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>BC</td>
+                </tr>
+                <tr>
+                    <td>Qualipication</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td>Date Of Join</td>
+                    <td>31/01/2024</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <td>Web Desdigning</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td><span id="statusSpan" class="Status1">Appearance</span></td>
+
+                    <script>
+                        function updateStatusClass() {
+                            const statusSpan = document.getElementById("statusSpan");
+
+                            if (statusSpan.textContent.trim().toLowerCase() === "done") {
+                                statusSpan.className = "Status2";
+                            } else {
+                                statusSpan.className = "Status1";
+                            }
+                        }
+                        updateStatusClass();
+                    </script>
+                </tr>
+                <tr>
+                    <th>Total Fix Fee</th>
+                    <td>20000/-</td>
+                </tr>
+                <tr>
+                    <table class="fee-table">
+                        <tr>
+                            <th class="name" colspan="2" style="text-align: center;font-size: 30px;">Fee Detail</th>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <th>Fee</th>
+                        </tr>
+                        <tr>
+                            <td>01/02/2024</td>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                            <td>03/03/2024</td>
+                            <td>3500</td>
+                        </tr>
+                        <tr>
+                            <td>11/04/2024</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>07/05/2024</td>
+                            <td>1000</td>
+                        </tr>
+
+
+                        <!-- ================Totle Fee============ -->
+
+                        <tr class="totalfee1">
+                            <th>Total Fee</th>
+                            <th>9000</th>
+                        </tr>
+                        <tr class="totalfee2">
+                            <th>Panding Fee</th>
+                            <th>11000</th>
+                        </tr>
+
+                    </table>
+                </tr>
+            </table>
+            <button id="openModalBtn" class="button">Fee Submit</button>
+            <button class="button">Student Data Update</button>
+            <button class="button"> Student Delete</button>
+            <button class="button" id="downloadPDF">Download PDF</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- ==================================POPUP Window For Submit Fee================ -->
+
+    
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <div class="fee-form">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <div class="img">
+                                <img src="/images/student1.jpg" alt="Student Image">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="name">Gurpreet Kaur</th>
+                    </tr>
+                    <tr>
+                        <td  colspan="2" >Course: Web Designing</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <form action="">
+                            <input class="feeinput" type="text" id="fee" placeholder="Add Your Payment">
+                            <input type="checkbox" id="fee" style="margin-top: 10px;" >
+                            <label>Check You Want To Submit Fee</label>
+                            <button class="button" id="closeModalBtn" type="submit">Submit Fee</button>
+                        </form>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModalBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("closeModalBtn");
+
+        // When the user clicks the button, open the modal with zoom-in effect
+        btn.onclick = function () {
+            modal.style.display = "block";
+            setTimeout(() => {
+                modal.classList.add("show");
+            }, 10); // Adding a small delay for the animation
+        }
+
+        // When the user clicks on <span> (x), close the modal with zoom-out effect
+        span.onclick = function () {
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Wait for the zoom-out animation to complete
+        }
+    </script>
+
+
+    <script>
+        document.getElementById('downloadPDF').addEventListener('click', function () {
+            // Fetch the content of pdf.html
+            fetch('pdf.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Create a temporary container for the content
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data;
+
+                    // Set up a style to remove any margins or spacing
+                    tempDiv.style.margin = '0';
+                    tempDiv.style.padding = '0';
+                    tempDiv.style.width = '100%';
+                    tempDiv.style.height = '100%';
+                    tempDiv.style.boxSizing = 'border-box';
+
+                    // Append the tempDiv to the body temporarily
+                    document.body.appendChild(tempDiv);
+
+                    // Define options for html2pdf
+                    const opt = {
+                        margin: [0, 0, 0, 0], // No margins
+                        filename: 'pdf.html.pdf', // PDF file name
+                        image: { type: 'jpeg', quality: 1.0 }, // Max image quality
+                        html2canvas: { 
+                            scale: 2, // Higher scale for better quality
+                            useCORS: true, // Use CORS to load images from external domains
+                            logging: true,
+                            backgroundColor: '#ffffff', // Set background color
+                            windowWidth: tempDiv.scrollWidth, // Match content width
+                            windowHeight: tempDiv.scrollHeight // Match content height
+                        },
+                        jsPDF: { 
+                            unit: 'px', // Use pixels as the unit for better control
+                            format: [tempDiv.scrollWidth, tempDiv.scrollHeight], // Match content size
+                            orientation: 'portrait' // Portrait orientation
+                        }
+                    };
+
+                    // Generate and save the PDF
+                    html2pdf().from(tempDiv).set(opt).save().then(() => {
+                        // Clean up the temporary div after PDF is generated
+                        document.body.removeChild(tempDiv);
+                    });
+                });
+        });
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+</body>
+
+</html>

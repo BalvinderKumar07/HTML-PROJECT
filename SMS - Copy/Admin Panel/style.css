@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 120px;
+}
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #7e7b7b;
+    color: #fff;
+}
+.link a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+}
+.link a:hover{
+    color: #7e7b7b;
+}
+.container{
+    width: 100%;
+    height: auto;
+    padding: 0px 5% 30px 5%;
+    overflow-x:auto
+}
+.container table{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.container table,th,td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+}
+.container table th{
+    background: #eee;
+}
+.last a{
+    text-decoration: none;
+}
+
+.student-image{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: auto;
+}
+.student-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail{
+    padding: 30px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+}
+.box{
+    height:auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+table{
+    width: 100%;
+}
+.box table{
+    width: 100%;
+}
+.box table,th,td{
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box table tr .name{
+    font-size: 40px;
+}
+.box:nth-child(1) table tr th{
+    border: none;
+}
+.fee-table{
+    margin-top:20px;
+}
+.Status1{
+    padding: 5px;
+    background: red;
+    border-radius: 10px;
+}
+.Status2{
+    padding: 5px;
+    background: green;
+    border-radius: 10px;
+}
+.totalfee1{
+    background: #e04343;
+    color: #fff;
+}
+.totalfee2{
+    background: #56e456;
+}
+.button{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.detail .box table tr{
+    width: 100%;
+    text-align: left; 
+}
+/* ========================Model Function  */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* Initially hidden with zoom out */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Smooth zoom transition */
+}
+
+/* Zoom in when modal is shown */
+.modal.show .modal-content {
+    transform: translate(-50%, -50%) scale(1);
+    /* Zoom in effect */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* =================Fee Input */
+.feeinput{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.fee-form table tr td,th{
+    border: none;
+}
+
+/* ===========================Icon Div Style */
+.icon i{
+    padding: 10px 12px;
+    background: #979595;
+    position: fixed;
+    right: 5%;
+    top: 85%;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 100%;
+}
+/* =======================Search input Style */
+.search{
+    width: 100%;
+    height: auto;
+    padding: 20px 5%;
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    /* background-color: red; */
+}
+.search input{
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+}
+.search button{
+    padding: 5px;
+    cursor: pointer;
+}
+.admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#open,#close{
+    display: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* =========================madia Query of Navbar */
+@media only screen and (max-width: 768px) {
+    #link{
+        position: absolute;
+        left: 0;
+        top: 10%;
+        background: #ffffff;
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+    #link a{
+        display: block;
+    }
+    #open{
+        display: block;
+    }
+}

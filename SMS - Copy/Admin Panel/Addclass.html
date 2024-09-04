@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Class</title>
+
+    <!-- Form CSS Style File Link -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+    <div class="form-container">
+        <form id="registration-form" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div>
+                    <label>Class Name:</label>
+                    <input type="text" name="teacher_name" required>
+                </div>
+                <div>
+                    <label>Teacher:</label>
+                    <select name="teacher" required>
+                        <option value="Balvinder kumar">Balvinder kumar</option>
+                        <option value="Balvinder kumar">Balvinder kumar</option>
+                        <option value="Balvinder kumar">Balvinder kumar</option>
+                        <option value="Balvinder kumar">Balvinder kumar</option>
+                    </select>
+                </div>
+            </div>     
+            
+            <div class="form-group">
+                <button type="submit">Add Class</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Featured Trips</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+			font-family: arial;
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url(https://sktperfectdemo.com/demos/adventure/wp-content/uploads/2020/12/sec8-bg.jpg);
+			/*background-size: cover;*/
+			background-repeat: no-repeat;
+			background-position:10px;
+		}
+		.box_div
+		{
+			width: 630px;
+			height: 350px;
+			/*background-color: #ffcdb2;*/
+			margin-top: 150px;
+			position: relative;
+			top: 20px;
+			left: -300px;
+		}
+		.mini_div
+		{
+			width: 100%;
+			height: 80px;
+			/*background-color: #dda15e;*/
+			margin-top: 5px;
+			border-radius: 10px;
+		}
+		.mini_div_in_div
+		{
+			width: 150px;
+			height: 100%;
+			/*background-color:white;*/
+			backdrop-filter: blur(50px);
+			float: left;
+			display: flex;
+			justify-content: centera;
+			align-items: center;
+			color: gray;
+		}
+		.mini_div:hover .mini_div_in_div
+		{
+			background-color: #dd4d40;
+			color: white;
+		}
+		.in_div1
+		{
+			width: 100px;
+			border-radius: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		.in_div2
+		{
+			width: 200px;
+			border-radius: 10px 0px 0px 10px;
+			border-right: 1px solid gray;
+		}
+		.in_div4
+		{
+			border-radius: 0px 10px 10px 0px;
+		}
+		.in_div3
+		{
+			border-right: 1px solid gray;
+		}
+		.mini_div_in_div h4
+		{
+			margin: auto;
+		}
+		.mini_div_in_div p 
+		{
+			margin: auto;
+		}
+		.mini_div_in_div h5
+		{
+			margin: auto;
+		}
+		.box_div button 
+		{
+			width: 150px;
+			height: 50px;
+			border-radius: 50px;
+			background: none;
+			border: 2px solid #dd4d40;
+			color: #dd4d40;
+			font-size: 15px;
+			position: relative;
+			top: 50px;
+			left: 200px;
+			transition: 1s;
+		}
+		.box_div button:hover 
+		{
+			color: black;
+			border-color:black;
+		}
+		.box_div h2
+		{
+			position: absolute;
+			top: -30%;
+			left: 3%;
+		}
+		.box_div h1
+		{
+			font-size: 55px;
+			position: absolute;
+			top: -20%;
+			left: 3%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box_div">
+		<h2>Discover Our</h2>
+		<h1>Featured Trips</h1>
+		<div class="mini_div">
+			<div class="mini_div_in_div in_div1">
+				<h4>DEC 07</h4>
+			</div>
+			<div class="mini_div_in_div in_div2">
+				<p><b>Climbing Course</b></p>
+			</div>
+			<div class="mini_div_in_div in_div3">
+				<h5>Group Trip</h5>
+			</div>
+			<div class="mini_div_in_div in_div4">
+				<h5>$99.00</h5>
+			</div>
+		</div>
+		<div class="mini_div">
+			<div class="mini_div_in_div in_div1">
+				<h4>DEC 07</h4>
+			</div>
+			<div class="mini_div_in_div in_div2">
+				<p><b>Zipline</b></p>
+			</div>
+			<div class="mini_div_in_div in_div3">
+				<h5>Group Trip</h5>
+			</div>
+			<div class="mini_div_in_div in_div4">
+				<h5>$99.00</h5>
+			</div>
+		</div>
+		<div class="mini_div">
+			<div class="mini_div_in_div in_div1">
+				<h4>DEC 07</h4>
+			</div>
+			<div class="mini_div_in_div in_div2">
+				<p><b>Highrope</b></p>
+			</div>
+			<div class="mini_div_in_div in_div3">
+				<h5>Group Trip</h5>
+			</div>
+			<div class="mini_div_in_div in_div4">
+				<h5>$99.00</h5>
+			</div>
+		</div>
+		<div class="mini_div">
+			<div class="mini_div_in_div in_div1">
+				<h4>DEC 07</h4>
+			</div>
+			<div class="mini_div_in_div in_div2">
+				<p><b>Zipline</b></p>
+			</div>
+			<div class="mini_div_in_div in_div3">
+				<h5>Group Trip</h5>
+			</div>
+			<div class="mini_div_in_div in_div4">
+				<h5>$99.00</h5>
+			</div>
+		</div>
+		<button><b>MORE TRIPS</b></button>
+	</div>
+</body>
+</html>

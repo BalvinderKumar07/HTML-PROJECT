@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Grid</title>
+    </head>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        main
+        {
+            width: 1000px;
+            height: 650px;
+            border: 2px solid red;
+            margin: auto;
+            display: grid;
+            grid-template-rows: 100px 150px 300px 100px;
+            grid-template-columns: repeat(3, 1fr) 15;
+        }
+        .header
+        {
+            border: 2px solid green;
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+        .box-1
+        {
+            border: 2px solid orange;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .box-2
+        {
+            border: 2px solid pink;
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .box-3
+        {
+            border: 2px solid black;
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        .content
+        {
+            border: 2px solid black;
+            grid-column: 1/4;
+        }
+        .sidebar
+        {
+            border: 2px solid rgb(76, 0, 255);
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        .footer
+        {
+            border: 2px solid rgb(51, 122, 6);
+            grid-column: 1/5;
+        }
+    </style>
+    <body>
+        
+        <main>
+            <div class="header">Header</div>
+            <div class="box-1">Box-1</div>
+            <div class="box-2">Box-2</div>
+            <div class="box-3">Box-3</div>
+            <div class="content">Main Content</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="footer">Footer</div>
+        </main>
+
+    </body>
+</html>
